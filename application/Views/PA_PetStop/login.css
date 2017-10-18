@@ -1,0 +1,70 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+
+label {
+	margin-top: 0.5em;
+	margin-bottom: 0em;
+}
+
+
+#background-image {
+	background-image: url("imagens/background_image.jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: 0.6;
+	background-repeat: repeat;
+}
+
+.login-pane {
+	position: relative;
+	top: 15%;
+	height: 27rem;
+	width: 23rem;	
+	margin: 0 auto;
+	padding: 2rem;
+	background: white;
+	box-shadow: 0px 0px 15px #888888;
+}
+
+.store-logo {
+	width: 10em;
+	height: 6em;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	background-color: gray;
+}
+
+.password-alert {
+	width: 100%;
+	background-color: salmon;
+	padding: 1em;
+	text-align: center;
+}
+
+.password-alert > a {
+	color: rgba(0,0,0,0.8);
+}
+
+.btn-danger {
+	font-size: 1.2rem;
+}
+
+/* Usefull  Classes */
+
+.clearfix {
+	margin-bottom: 20px;
+}
+
+.pull-left{
+	float: left!important;
+}
+
+.pull-right {
+	float: right!important;
+}
