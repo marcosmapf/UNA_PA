@@ -5,7 +5,7 @@ body {
 }
 
 #background_image {
-  background-image: url("imagens_landing/website_background.jpg");
+  background-image: url("imagens/main-background.jpg");
   position: absolute;
   top: 0;
   left: 0;

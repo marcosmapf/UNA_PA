@@ -8,31 +8,42 @@ label {
 	margin-bottom: 0em;
 }
 
+hr { 
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    border-color: rgba(0,0,0,0.2);
+} 
 
 #background-image {
-	background-image: url("imagens/background_image.jpg");
+	background-image: url("imagens/login-background.jpg");
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: -1;
+	z-index: 0;
 	opacity: 0.6;
 	background-repeat: repeat;
 }
 
 .login-pane {
 	position: relative;
-	top: 15%;
-	height: 27rem;
+	top: 10%;
+	height: auto;
 	width: 23rem;	
 	margin: 0 auto;
 	padding: 2rem;
 	background: white;
 	box-shadow: 0px 0px 15px #888888;
+	border: 1px solid #bdc3c7;
 }
 
-.store-logo {
+.brand {
 	width: 10em;
 	height: 6em;
 	margin: 0 auto;
@@ -41,10 +52,12 @@ label {
 }
 
 .password-alert {
+	margin-top: -1em;
 	width: 100%;
 	background-color: salmon;
-	padding: 1em;
+	padding: 0.5em;
 	text-align: center;
+	border: 1px solid #d9514f;
 }
 
 .password-alert > a {
@@ -53,6 +66,37 @@ label {
 
 .btn-danger {
 	font-size: 1.2rem;
+	box-shadow: 1px 1px 5px #888888
+}
+
+
+/* Social Links */
+
+.social-block-title {
+	margin-top: -2.4em;
+	text-align: center;	
+}
+
+.social-block {
+	text-align: center;
+	margin-top: 1.5em;
+}
+
+.social-block > a {
+	padding-right: 0.5em;
+}
+
+
+.fa-facebook-square{
+	color: #3b5998;
+}
+
+.fa-twitter-square{
+	color: #00aced;
+}
+
+.fa-google-plus-square{
+	color: #dd4b39;
 }
 
 /* Usefull  Classes */
@@ -68,3 +112,4 @@ label {
 .pull-right {
 	float: right!important;
 }
+
