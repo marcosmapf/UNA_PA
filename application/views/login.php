@@ -16,12 +16,12 @@
 			<div class="clearfix">
 				<div class="form-group">
 					<input type="email" name="userAddress" class="form-control" placeholder="E-mail" ng-model="emailAddress" required>
-					<!--<span ng-show="loginForm.userAddress.$error.required">Insira um e-mail válido</span>-->
+					<span ng-show="loginForm.userAddress.$error.email">Insira um e-mail válido</span>
 				</div>
 				<div class="form-group">
 					<input type="password" name="userPass" class="form-control" placeholder="Senha" ng-model="password" required>
 				</div>
-				<div class="form-group pull-left"><button type="button" class="btn btn-danger" ng-click="">Entrar</md-button></div>
+				<div class="form-group pull-left"><button type="button" class="btn btn-danger" ng-click="">Entrar</button></div>
 				<div class="form-group pull-right"><label class="checkbox"><input type="checkbox" value="remember-me"> Lembrar Senha</label></div>
 			</div>
 			<div class="password-alert"><a href="#">Esqueceu a senha?</a></div>
@@ -29,13 +29,13 @@
 		<hr>
 		<div class="social-block-title">Login com Rede Social</div>
 		<div class="social-block">
-			<a href="#" id="facebook_connection" ng-click="">
+			<a href="" id="facebook_connection" ng-click="">
 				<i class="fa fa-facebook-square fa-3x"></i>
 			</a>
-			<a href="#" id="twitter-connection" ng-click="">
+			<a href="" id="twitter-connection" ng-click="">
 				<i class="fa fa-twitter-square fa-3x"></i>
 			</a>
-			<a href="#" id="google-connection" ng-click="">
+			<a href="" id="google-connection" ng-click="">
 				<i class="fa fa-google-plus-square fa-3x g-square"></i>
 			</a>
 		</div>
