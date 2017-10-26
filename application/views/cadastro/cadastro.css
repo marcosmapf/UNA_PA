@@ -1,6 +1,11 @@
-html, body{
+html, body {
+	display: flex;
+	align-items: center;
 	width: 100%;
 	height: 100%;
+	font-size: 0.9em;
+	background-image: url('imagens/acesso_background.jpg');
+	background-repeat: repeat;	
 }
 
 label {
@@ -19,34 +24,28 @@ hr {
     border-color: rgba(0,0,0,0.2);
 } 
 
-#background-image {
-	background-image: url('imagens/login-background.jpg');
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 0;
-	opacity: 0.6;
-	background-repeat: repeat;
-}
-
 .login-pane {
-	position: relative;
-	top: 10%;
-	height: auto;
-	width: 40rem;	
+	width: 60%;
 	margin: 0 auto;
-	padding: 2rem;
-	padding-bottom: 1rem;
+	padding: 2rem 2rem 1rem 2rem;
 	background: white;
 	box-shadow: 0px 0px 15px #888888;
 	border: 1px solid #bdc3c7;
 }
 
+@media (max-width: 767px) {
+	
+	html, body {
+		font-size: 0.65em;
+	}
+	.login-pane {
+		width: 100%;
+	}
+}
+
 .brand {
-	width: 10em;
-	height: 6em;
+	width: 20em;
+	height: 6rem;
 	margin: 0 auto;
 	margin-bottom: 2rem;
 	background-color: gray;
@@ -123,3 +122,12 @@ hr {
 .pull-center {
 	text-align: center;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+

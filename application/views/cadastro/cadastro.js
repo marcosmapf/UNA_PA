@@ -1,4 +1,4 @@
-var appModule = angular.module("appModule", ['ngMaterial', 'ngMessages']);
+var appModule = angular.module("appModule", ['ngMaterial', 'ngMessages', 'ui.mask']);
 
 appModule.controller('viewController', function($scope) {
 	$scope.templates = [{nome: "login.php", url:"login.php"}, {nome: "cadastro.php", url: "cadastro.php"}]
@@ -14,8 +14,12 @@ appModule.controller('loginController', function($scope) {
 
 appModule.controller('cadastroController', function($scope) {
 
+	$scope.padraoTelefone = new RegExp(/^\([0-9]{2}\)(3[0-9]{7}\s|9[7-9][0-9]{7})$/);
+	$scope.padraoEmail = new RegExp('^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$')
+
 	$scope.nomeCompleto;
-	$scope.enderedoEmail;
+	$scope.sexo
+	$scope.enderecoEmail;
 	$scope.senhaUsuario;
 	$scope.telefone;
 	$scope.enderecoCep;
@@ -31,10 +35,6 @@ appModule.controller('cadastroController', function($scope) {
 
 	//Declarando Funções/Métodos dentro do escopo --> $scope.nomeDaFuncao = function() {}
 });
-
-
-
-
 
 
 appModule.filter('phoneNumber', function () {
