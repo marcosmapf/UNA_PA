@@ -24,7 +24,7 @@ hr {
     border-color: rgba(0,0,0,0.2);
 } 
 
-.login-pane {
+.cadastro-pane {
 	width: 60%;
 	margin: 0 auto;
 	padding: 2rem 2rem 1rem 2rem;
@@ -38,7 +38,7 @@ hr {
 	html, body {
 		font-size: 0.65em;
 	}
-	.login-pane {
+	.cadastro-pane {
 		width: 100%;
 	}
 }

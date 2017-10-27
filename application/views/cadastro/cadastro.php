@@ -10,13 +10,11 @@
 </head>
 <body ng-app="appModule" ng-cloak>
 	<div class="container">	
-		<main class="login-pane col-md-12 col-sm-12 col-xs-12">
-			<form name="cadastroForm" ng-submit="teste()" method="post" ng-controller="cadastroController">
-				
+		<main class="cadastro-pane col-md-12 col-sm-12 col-xs-12">
+			<form name="cadastroForm" ng-submit="teste()" method="post" ng-controller="cadastroController">				
 				<figure class="brand form-group">
 					<img src="../imagens/logoVermelho2.png" width="25%">
 				</figure>
-
 				<div class="row">
 					<div class="form-group col-md-8">
 						<input type="text" name="nomeCompleto" class="form-control" placeholder="Nome Completo" ng-model="nomeCompleto" required>
@@ -37,14 +35,12 @@
 					<div class="form-group col-md-4">
 						<input type="text" name="telefone" class="form-control" placeholder="Telefone" ng-model="telefone" onKeyPress="if(this.value.length==11) return false;" ng-pattern="padraoTelefone" ui-mask="(99)99999999?9" ui-mask-placeholder ui-mask-placeholder-char="space" required> <!--{{telefone|phoneNumber}}-->
 					</div>
-				</div>				
-
+				</div>		
 				<div class="row">
 					<div class="form-group col-md-8">
-						<input type="password" name="senhaUsuario" class="form-control" ngMinlength="7" placeholder="Senha" ng-model="senhUsuario" onKeyPress="if(this.value.length==30) return false;" required>
+						<input type="password" name="senhaUsuario" class="form-control" ngMinlength="7" placeholder="Senha" ng-model="senhaUsuario" onKeyPress="if(this.value.length==30) return false;" required>
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="form-group col-md-4">
 						<input type="text" name="enderecoCep" class="form-control" placeholder="CEP" ng-model="enderecoCep" onKeyPress="if(this.value.length==8) return false;" ng-pattern="padraoCEP" ui-mask="99999-999" ui-mask-placeholder ui-mask-placeholder-char="_" required>
@@ -68,17 +64,14 @@
 						<input type="number" name="enderecoNumero" class="form-control" placeholder="Número" ng-model="enderecoNumero" required>
 					</div>					
 				</div>	
-
 				<div class="row">
 					<div class="form-group col-md-8">
 						<input type="text" name="enderecoComplemento" class="form-control" placeholder="Complemento (opcional)" ng-model="enderecoComplemento">
 					</div>
-				</div>	
-				
+				</div>
 				<div class="form-group pull-center">
 					<input type="submit" class="btn btn-danger">
 				</div>
-
 			</div>
 			</form>
 		</main>
@@ -95,10 +88,6 @@
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
 <script type="text/javascript" src="cadastro.js"></script> <!--Local Javascript Import-->
 </html>
-
-
-<!--Angular UI Mask para Telefone!!
-https://github.com/angular-ui/ui-mask-->
 
 <!-- 
 Tutoriais Angular Messages 	
