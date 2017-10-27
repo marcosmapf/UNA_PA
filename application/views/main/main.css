@@ -1,0 +1,88 @@
+/*Overall settings*/
+
+body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 0.9em;
+  /*background-image: url('../imagens/acesso_background.jpg');*/
+  background-repeat: repeat;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0  ;
+}
+
+/*Navbar Section*/
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #EF5666;
+}
+
+.navbar-brand {
+	padding-right: 0px;
+	padding-left: 0px;
+  margin-right: 0px;
+}
+
+.nav-menu {
+   font-family:"Maven Pro",Helvetica,Arial,sans-serif;
+   padding-left: 5px;
+   padding-right: 5px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   text-align: center;
+}
+
+.fa {
+  color: black;
+}
+
+@media (min-width: 576px) {}
+  .form-inline .form-control {
+      width: 23rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+  #navbarMenu > ul > li {
+    border: solid 2px black;
+  }
+}
+
+
+/*Banner Carousel Section*/
+
+.carousel-inner > .carousel-item > img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.teste1 {
+  background-color: lightgray;
+  text-align: center;
+}
+.teste1 img  {
+  width: 80%;
+}
+
+.col-padding {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
+/* Carousel Fade-in Effect */
