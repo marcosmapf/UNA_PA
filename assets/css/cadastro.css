@@ -24,20 +24,8 @@ hr {
     border-color: rgba(0,0,0,0.2);
 } 
 
-#background-image {
-	background-image: url('imagens/login-background.jpg');
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 0;
-	opacity: 0.6;
-	background-repeat: repeat;
-}
-
-.login-pane {
-	width: 50%;
+.cadastro-pane {
+	width: 60%;
 	margin: 0 auto;
 	padding: 2rem 2rem 1rem 2rem;
 	background: white;
@@ -45,29 +33,13 @@ hr {
 	border: 1px solid #bdc3c7;
 }
 
-
-@media (max-width: 1200px) and (min-width: 993px){
-
-	.login-pane {
-		width: 60%;
-	}
-}
-
-@media (max-width: 992px) and (min-width: 769px){
-
-	.login-pane {
-		width: 65%;
-	}
-}
-
-@media (max-width: 768px){
+@media (max-width: 767px) {
 	
-	.login-pane {
-		width: 80%;
+	html, body {
+		font-size: 0.65em;
 	}
-
-	.centralize {
-		text-align: center;
+	.cadastro-pane {
+		width: 100%;
 	}
 }
 
@@ -92,7 +64,6 @@ hr {
 }
 
 .btn-danger {
-	font-size: 1.2rem;
 	box-shadow: 1px 1px 5px #888888
 }
 
@@ -100,16 +71,17 @@ hr {
 /* Social Links */
 
 .social-block-title {
-	width: 11em;
 	background-color: white;
+	width: 11em;
 	margin: 0 auto;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
-	margin-top: -2.3em;	
+	margin-top: -2.4em;
 }
 
 .social-block {
 	text-align: center;
+	margin-top: 1.5em;
 }
 
 .social-block > a {
@@ -134,8 +106,8 @@ hr {
 
 /* Usefull  Classes */
 
-.push-upwards {
-	transform: translateY(-30px);
+.clearfix {
+	margin-bottom: 20px;
 }
 
 .pull-left{
@@ -146,16 +118,15 @@ hr {
 	float: right!important;
 }
 
-.align-left {
-	text-align: left;
+.pull-center {
+	text-align: center;
 }
 
-.align-right {
-	text-align: right;	
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
-
-.align-center {
-	margin: 0 auto;
-}
-
 
