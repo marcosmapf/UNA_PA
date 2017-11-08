@@ -13,7 +13,7 @@
 		<main class="cadastro-pane col-md-12 col-sm-12 col-xs-12">
 			<form name="cadastroForm" ng-submit="teste()" method="post" ng-controller="cadastroController">				
 				<figure class="brand form-group">
-					<img src="../imagens/logoVermelho2.png" width="25%">
+					<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
 				</figure>
 				<div class="row">
 					<div class="form-group col-md-8">
