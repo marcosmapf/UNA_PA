@@ -7,6 +7,7 @@
 	<title>Teste</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
 	<link rel="stylesheet" href="../../../assets/css/cadastro.css"> <!--Local Stylesheet Import-->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body ng-app="appModule" ng-cloak>
 	<div class="container">	
@@ -43,22 +44,18 @@
 				</div>
 				<div class="row">
 					<div class="form-group col-md-4">
-						<input type="text" name="enderecoCep" class="form-control" placeholder="CEP" ng-model="enderecoCep" onKeyPress="if(this.value.length==8) return false;" ng-pattern="padraoCEP" ui-mask="99999-999" ui-mask-placeholder ui-mask-placeholder-char="_" required>
+						<input type="text" id="enderecoCep" class="form-control" placeholder="CEP" ng-model="enderecoCep" onKeyPress="if(this.value.length==8) return false;" ng-pattern="padraoCEP" ui-mask="99999-999" ui-mask-placeholder ui-mask-placeholder-char="_" required>
 					</div>
 					<div class="form-group col-md-4">
-						<select name="nomeCompleto" class="form-control" ng-model="sexo" required>
-							<option value="" disabled selected>Estado</option>
-						</select>
+						<input type="text" name="enderecoEstado" id="uf" class="form-control" placeholder="Estado" ng-model="enderecoEstado" required>
 					</div>
 					<div class="form-group col-md-4">
-						<select name="enderecoCidade" class="form-control" ng-model="enderecoCidade" required>
-							<option value="" disabled selected>Cidade</option>
-						</select>
+						<input type="text" name="enderecoCidade" id="cidade" class="form-control" placeholder="Cidade" ng-model="enderecoCidade" required>
 					</div>
 				</div>		
 				<div class="row">					
 					<div class="form-group col-md-8">
-						<input type="text" name="enderecoRua" class="form-control" placeholder="Rua" ng-model="enderecoRua" required>
+						<input type="text" name="enderecoRua" id="enderecoRua" class="form-control" placeholder="Rua" ng-model="enderecoRua" required>
 					</div>
 					<div class="form-group col-md-4">
 						<input type="number" name="enderecoNumero" class="form-control" placeholder="Número" ng-model="enderecoNumero" required>
