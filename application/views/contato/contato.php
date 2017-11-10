@@ -48,7 +48,7 @@
 
 				<div class="row">
 					<div class="form-group col-md-12">
-						<textarea class="form-control" rows="8" id="comment"></textarea>
+						<textarea class="form-control" rows="8" id="comment" placeholder="Insira sua mensagem" ng-model="mensagem"></textarea>
 					</div>
 				</div>
 
