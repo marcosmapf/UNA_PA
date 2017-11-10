@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Teste</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
-	<link rel="stylesheet" href="login.css"> <!--Local Stylesheet Import-->
+	<link rel="stylesheet" href="<?php echo base_url('application/views/teste.css');?>"> <!--Local Stylesheet Import-->
 </head>
 <body ng-app="appModule" ng-cloak>	
 	<div id="background-image"></div>
@@ -43,11 +43,11 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-<script src="node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-<script src="node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-<script src="node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-<script src="node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-<script src="node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
+<script src="/application/views/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+<script src="/views/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
+<script src="/views/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
+<script src="/views/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
+<script src="/views/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
 <script type="text/javascript" src="login.js"></script> <!--Local Javascript Import-->
 </html>
