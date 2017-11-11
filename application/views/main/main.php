@@ -32,13 +32,16 @@
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item nav-menu active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../main/main.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
-            <a class="nav-link" href="#">Contato<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../contato/contato.php">Contato<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
             <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item nav-menu">
+            <a class="nav-link" href="#">Sobre Nós<span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <!--Botões Laterais-->
@@ -51,12 +54,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-            <img src="../../../assets/imagens/shopping-cart.png" alt="Shop-Cart">   
+              <img src="../../../assets/imagens/shopping-cart.png" alt="Shop-Cart">   
             </a>      
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+            <a class="nav-link" href="../login/login.php">
+              <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
             </a>
           </li>
         </ul>        
@@ -102,7 +105,9 @@
       <div class="teste1 col-md-12 col-sm-12 col-xs-12">
           <div class="row">
             <div class="col-md-3">
-              <img src="../../../assets/imagens/login-background.jpg">
+              <a href="../produto/produto.php">
+                <img src="../../../assets/imagens/login-background.jpg">
+              </a>
               <h1>teste1</h1>
               <h2>teste</h2>
               <p>teste</p>

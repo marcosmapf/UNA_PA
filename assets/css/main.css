@@ -70,11 +70,19 @@ body {
 }
 
 .teste1 {
-  background-color: lightgray;
+  padding-top: 10px;
+  background-color: white;
   text-align: center;
 }
 .teste1 img  {
+  padding-top: 2px;
+  border: solid 1px;
   width: 80%;
+}
+
+.teste1 img:visited {
+  text-decoration: none;
+  border-color: black;
 }
 
 .col-padding {

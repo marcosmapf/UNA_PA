@@ -13,7 +13,9 @@
 		<main class="login-pane col-md-12 col-sm-12 col-xs-12">
 			<form name="loginForm" ng-submit="teste()" method="post" ng-controller="loginController">
 				<figure class="brand form-group col-md-12">
-					<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
+					<a href="../main/main.php">
+						<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
+					</a>
 				</figure>
 				<div>
 					<div class="row">
@@ -39,7 +41,7 @@
 					</div>
 					<div class="row">
 						<div class="password-alert col-md-6 align-center">
-							<a href="#">Esqueceu a senha?</a>
+							<a href="../cadastro/cadastro.php">Cadastro</a>
 						</div>
 					</div>
 				</div>
@@ -50,12 +52,6 @@
 				<div class="social-block">
 					<a href="" id="facebook_connection" ng-click="">
 						<i class="fa fa-facebook-square fa-3x"></i>
-					</a>
-					<a href="" id="twitter-connection" ng-click="">
-						<i class="fa fa-twitter-square fa-3x"></i>
-					</a>
-					<a href="" id="google-connection" ng-click="">
-						<i class="fa fa-google-plus-square fa-3x g-square"></i>
 					</a>
 				</div>
 			</form>			
