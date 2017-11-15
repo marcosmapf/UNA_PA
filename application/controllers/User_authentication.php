@@ -30,6 +30,9 @@ class User_Authentication extends CI_Controller
             $userData['profile_url'] = 'https://www.facebook.com/'.$userProfile['id'];
             $userData['picture_url'] = $userProfile['picture']['data']['url'];
 
+            var_dump($userData);
+            exit();
+
             // Insert or update user data
             $userID = $this->user->checkUser($userData);
 
