@@ -52,9 +52,9 @@ class User_Authentication extends CI_Controller
             // Get login URL
             $data['authUrl'] =  $this->facebook->login_url();
         }
-
+        echo "Teste";
         // Load login & profile view
-        $this->load->view('teste2',$data);
+        //$this->load->view('teste2',$data);
     }
 
     public function logout() {
