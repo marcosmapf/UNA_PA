@@ -19,7 +19,7 @@
 $config['facebook_app_id']              = '236919266841806';
 $config['facebook_app_secret']          = '375646986af2bc59ac3ad3dd84897677';
 $config['facebook_login_type']          = 'web';
-$config['facebook_login_redirect_url']  = 'user_authentication/index';
+$config['facebook_login_redirect_url']  = 'index.php/user_authentication/index';
 $config['facebook_logout_redirect_url'] = 'user_authentication/logout';
 $config['facebook_permissions']         = array('email');
 $config['facebook_graph_version']       = 'v2.6';
