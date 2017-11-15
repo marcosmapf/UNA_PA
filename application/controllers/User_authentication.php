@@ -30,9 +30,6 @@ class User_Authentication extends CI_Controller
             $userData['profile_url'] = 'https://www.facebook.com/'.$userProfile['id'];
             $userData['picture_url'] = $userProfile['picture']['data']['url'];
 
-            var_dump($userData);
-            exit();
-
             // Insert or update user data
             $userID = $this->user->checkUser($userData);
 
@@ -53,7 +50,7 @@ class User_Authentication extends CI_Controller
             $data['authUrl'] =  $this->facebook->login_url();
         }
         // Load login & profile view
-        $this->load->view('teste2',$data);
+        $this->load->view('login',$data);
     }
 
     public function logout() {

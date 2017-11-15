@@ -50,7 +50,7 @@
 					<p>Login com Rede Social</p>
 				</div>
 				<div class="social-block">
-					<a href="" id="facebook_connection" ng-click="">
+					<a href="<?=$authUrl?>" id="facebook_connection" ng-click="">
 						<i class="fa fa-facebook-square fa-3x"></i>
 					</a>
 				</div>
