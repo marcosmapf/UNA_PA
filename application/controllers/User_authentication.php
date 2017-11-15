@@ -22,10 +22,9 @@ class User_Authentication extends CI_Controller
             // Preparing data for database insertion
             $userData['oauth_provider'] = 'facebook';
             $userData['oauth_uid'] = $userProfile['id'];
-            $userData['first_name'] = $userProfile['first_name'];
-            $userData['last_name'] = $userProfile['last_name'];
+            $userData['nome'] = $userProfile['first_name'];
+            $userData['sobrenome'] = $userProfile['last_name'];
             $userData['email'] = $userProfile['email'];
-            $userData['gender'] = $userProfile['gender'];
             $userData['locale'] = $userProfile['locale'];
             $userData['profile_url'] = 'https://www.facebook.com/'.$userProfile['id'];
             $userData['picture_url'] = $userProfile['picture']['data']['url'];
