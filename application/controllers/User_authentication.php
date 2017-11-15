@@ -50,7 +50,7 @@ class User_Authentication extends CI_Controller
             $data['authUrl'] =  $this->facebook->login_url();
         }
         // Load login & profile view
-        $this->load->view('login/login',$data);
+        $this->load->view('teste2',$data);
     }
 
     public function logout() {
