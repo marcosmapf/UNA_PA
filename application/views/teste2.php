@@ -1,6 +1,7 @@
 <?php
 if(!empty($authUrl)) {
     echo '<a href="'.$authUrl.'">Teste</a>';
+    echo $authUrl;
 }else{
 ?>
 <div class="wrapper">
