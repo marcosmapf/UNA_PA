@@ -6,18 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" href="../../../assets/css/produto.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-  <script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-  <script src="../../../assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-  <script src="../../../assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-  <script src="../../../assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-  <script src="../../../assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
-  <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-	<script type="text/javascript" src="../../../assets/js/produto.js"></script>
 	<title>Teste</title>	
 </head>
-<body>
+<body ng-app="appModule" ng-cloak>
 <!--Navbar section-->
   <header>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -66,35 +57,66 @@
     </nav>
   </header>
   <div class="container">
-    <section class="top-margin medium-padding">
-        <div class="row">
-          <div class="col-md-6 col-sm-6 col-xs-12 text-center">
-            <img src="../../../assets/imagens/acesso_background.jpg">
+    <form name="produtoForm" ng-submit="" method="post" ng-controller="produtoController">
+      <section class="top-margin medium-padding card">
+          <div class="row">
+
+            <div class="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <img id="imagem-produto" ng-src="{{imagemProduto}}"></img>
+            </div>
+
+            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+              <div class="medium-margin">
+                <div>
+                  <h1>{{nomeProduto}}</h1>
+                </div>
+
+                <div class="single-border small-padding text-center">
+                  <p><strong>Vendido e entregue por PetStop</strong></p>
+                  <h3>R$ {{precoProduto}}</h3><br>
+                  <!--
+                  <select name="quantidadeProdutos" ng-model="quantidadeSelecionada" required>
+                    <option ng-repeat="option in quantidadeProdutos" ng-value="option.value">{{option.name}}</option>
+                  </select></br></br>
+                  -->
+                  <button class="btn btn-danger" width="200%">Comprar</button><br><br>
+                  <div class="info-pagamento text-left">
+                    <img src="../../../assets/imagens/cartao-credito.png" width="8%"> R$ {{precoProduto*0.9 | number : 2}} no boleto bancário (10% de desconto)
+                    <p><img src="../../../assets/imagens/codigo-barras.png"  width="8%"> R$ {{precoProduto | number : 2}} em até 8x de {{precoProduto/8  | number : 2}} sem juros</p>
+                  </div>
+
+                </div>
+              
+                <div>
+                  <br><p>{{descricaoProduto}}</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 col-sm-6 col-xs-12 text-left">
-            <div>
-              <h1>Nome do Produto</h1>
-            </div>
-            <div class="form-group col-md-12 single-border small-padding full-width padding-top">
-              <h3>Preço</h3>
-              <select id="quantidadeProdutos" name="quantidadeProdutos" class="form-control" ng-model="sexo" required>
-                <option value="" disabled selected>Quantidade</option>
-              </select>
-              <button class="btn btn-danger">Comprar</button>
-            </div>
-            <div>
-              <h2>Descrição Produto</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </div>
-    </section>
+      </section>
+    </form>
   </div>
-  
+  <footer class="d-inline-flex">
+      <!--<img src="../../../assets/imagens/logoVermelho3.png" width="2.5%">-->
+      <div class="mr-auto p-2">
+        <div></div>
+      </div>
+      <div class="mx-auto p-2">
+        <div><img class="img-fluid" src="../../../assets/imagens/logo-pequena.png"> Pet Stop</div>
+      </div>
+      <div class="ml-auto p-2">
+        <div>
+          <a href="" id="facebook_connection" ng-click="">
+            <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+  </footer>  
 </body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
+<script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+<script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
+<script type="text/javascript" src="../../../assets/js/produto.js"></script> <!--Local Javascript Import-->
 </html>
