@@ -14,8 +14,8 @@ class User extends CI_Model{
         if($prevCheck > 0){
             $prevResult = $prevQuery->row_array();
             $data['modified'] = date("Y-m-d H:i:s");
-            $update = $this->db->update($this->tableName,$data,array('id'=>$prevResult['id']));
-            $userID = $prevResult['id'];
+            $update = $this->db->update($this->tableName,$data,array('codigoCliente'=>$prevResult['codigoCliente']));
+            $userID = $prevResult['codigoCliente'];
         }else{
             $data['created'] = date("Y-m-d H:i:s");
             $data['modified'] = date("Y-m-d H:i:s");
