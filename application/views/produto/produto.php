@@ -22,10 +22,10 @@
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item nav-menu active">
-            <a class="nav-link" href="../main/main.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url?>/application/views/main/main.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
-            <a class="nav-link" href="../contato/contato.php">Contato<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url?>/application/views/contato/contato.php">Contato<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
             <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
