@@ -17,7 +17,7 @@
       <span class="navbar-toggler-icon"></span>
       </button>
       <!--Logo"-->
-      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logoVermelho3.png" width="10%"> Pet Stop</a>
+      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png" width="10%"> Pet Stop</a>
       <!--Menu Central-->
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
@@ -68,7 +68,7 @@
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
               <div class="medium-margin">
                 <div>
-                  <h1>{{nomeProduto}}</h1>
+                  <h2>{{nomeProduto}}</h2>
                 </div>
 
                 <div class="single-border small-padding text-center">
@@ -84,11 +84,9 @@
                     <img src="../../../assets/imagens/cartao-credito.png" width="8%"> R$ {{precoProduto*0.9 | number : 2}} no boleto bancário (10% de desconto)
                     <p><img src="../../../assets/imagens/codigo-barras.png"  width="8%"> R$ {{precoProduto | number : 2}} em até 8x de {{precoProduto/8  | number : 2}} sem juros</p>
                   </div>
-
-                </div>
-              
+                </div>              
                 <div>
-                  <br><p>{{descricaoProduto}}</p>
+                  <br><p>Com o Bebedouro Prático, sempre que o nível de água baixar, é reabastecido automaticamente pelo reservatório que precisa conter água.<br/><br/>É ideal para animais de pequeno porte.<br/><br/>Desmontável, facilita a higienização e abastecimento</p>
                 </div>
               </div>
             </div>

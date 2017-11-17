@@ -11,6 +11,22 @@ body {
   margin: 0;
 }
 
+a { 
+  color: black;
+}
+
+h5  {
+  padding: 10px;
+
+}
+
+div > p {
+  color: orange;
+  font-size: 1.3em;
+
+}
+
+
 .container {
   width: 100%;
   padding: 0  ;
@@ -56,7 +72,9 @@ body {
   }
 }
 
-
+#carouselExampleIndicators{
+  padding-top: 65px;
+}
 /*Banner Carousel Section*/
 
 .carousel-inner > .carousel-item > img {
@@ -70,7 +88,7 @@ body {
 }
 
 .teste1 {
-  padding-top: 10px;
+  padding-top: 50px;
   background-color: white;
   text-align: center;
 }

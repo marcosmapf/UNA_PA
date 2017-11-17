@@ -78,13 +78,16 @@
           </ol>
           <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-              <img class="d-block img-fluid" src="../../../assets/imagens/400.jpg" alt="First slide">
+              <img class="d-block img-fluid" src="../../../assets/imagens/banner01.webp" alt="Primeiro banner">
           </div>
           <div class="carousel-item">
-            <img class="d-block img-fluid" src="../../../assets/imagens/400.jpg" alt="Second slide">
+            <img class="d-block img-fluid" src="../../../assets/imagens/banner02.webp" alt="Segundo banner">
           </div>
           <div class="carousel-item">
-            <img class="d-block img-fluid" src="../../../assets/imagens/400.jpg" alt="Third slide">
+            <img class="d-block img-fluid" src="../../../assets/imagens/banner03.webp" alt="Terceiro banner">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="../../../assets/imagens/banner04.webp" alt="Quarto banner">
           </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -104,59 +107,67 @@
     <section>
       <div class="teste1 col-md-12 col-sm-12 col-xs-12">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
               <a href="../produto/produto.php">
-                <img src="../../../assets/imagens/login-background.jpg">
+                <img src="../../../assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.webp">
               </a>
-              <h1>teste1</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+              <h5>Bebedouro Prático Automático Cães e Gatos Azul Alvorada</h5>
+              <p>a partir de: R$ 21,99</p>
             </div>
-             <div class="col-md-3">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste1</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.webp">
+              <h5>Brinquedo Cenoura Nylon Buddy Toys</h5>
+              <p>a partir de: R$ 37,90</p>
             </div>
-            <div class="col-md-3">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste1</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/brinquedo-para-gatos-com-catNip-jambo.webp">
+              <h5>Brinquedo para Gatos com CatNip Jambo</h5>
+              <p>a partir de: R$ 18,50</p>
             </div>
-            <div class="col-md-3">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste1</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/butox-20-ml-pulverização-intervet.webp">
+              <h5>Butox 20 ml Pulverização Intervet</h5>
+              <p>a partir de: R$ 5,90</p>
+            </div> 
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/cama-suiça-bege-bichinho-chic.webp">
+              <h5>Cama Suiça Bege Bichinho Chic</h5>
+              <p>a partir de: R$ 51,90</p>
             </div>
-          </div>  
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste2</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/casa-mega-fácil-azul-alvorada.webp">
+              <h5>Casa Mega Fácil Azul Alvorada</h5>
+              <p>a partir de: R$ 89,90</p>
             </div>
-             <div class="col-md-4 col-sm-4 col-xs-12">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste2</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/cat-nip-120-ml-petmais.webp">
+             <h5>Cat Nip 120 ml Petmais</h5>
+              <p>a partir de: R$ 20,50</p>
+            </div>  
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.webp">
+              <h5>Coleira Antipulgas Leevre 25,5g 48cm Ourofino</h5>
+              <p>a partir de: R$ 105,90</p>
             </div>
-             <div class="col-md-4 col-sm-4 col-xs-12">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste2</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/petisco-doguitos-rodízio-linguicinha-purina-45g.webp">
+             <h5>Petisco Doguitos Rodízio Linguicinha Purina - 45g</h5>
+              <p>a partir de: R$ 4,90</p>
             </div>
-          </div>     
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <img src="../../../assets/imagens/login-background.jpg">
-              <h1>teste3</h1>
-              <h2>teste</h2>
-              <p>teste</p>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/petisco-keldog-bifinho-de-carne-e-vegetais-kelco-55g.webp">
+              <h5>Petisco Keldog Bifinho de Carne e Vegetais Kelco - 55 g</h5>
+              <p>a partir de: R$ 3.50</p>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.webp">
+             <h5>Ração Premier Nutrição Clínica Cães Cardio - 2kg</h5>
+              <p>a partir de: R$ 62,90</p>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
+              <img src="../../../assets/imagens/produtos/neodexa-spray-74g-coveli.webp">
+              <h5>Neodexa Spray 74 g Coveli - Neodexa Spray 74g Coveli</h5>
+              <p>a partir de: R$ 55,90</p>
             </div>
           </div>
       </div>
