@@ -42,14 +42,17 @@ class User_Authentication extends CI_Controller
 
             // Get logout URL
             $data['logoutUrl'] = $this->facebook->logout_url();
+            $this->load->view('main/main', $data);
         }else{
             $fbuser = '';
 
             // Get login URL
             $data['authUrl'] =  $this->facebook->login_url();
+            // Load login
+            $this->load->view('login/login',$data);
         }
-        // Load login & profile view
-        $this->load->view('login/login',$data);
+        
+        
     }
 
     public function logout() {

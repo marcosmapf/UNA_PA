@@ -58,7 +58,7 @@
             </a>      
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../login/login.php">
+            <a class="nav-link" href="<%=base_url()%>/user_authentication/index">
               <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
             </a>
           </li>
