@@ -15,7 +15,7 @@
 
 
 				<figure class="brand form-group">
-					<a href="<?=base_url?>/application/views/main/main.php">
+					<a href="../main/main.php">
 						<img src="../../../assets/imagens/logoVermelho2.png" alt="Pet Stop" width="20%">
 					</a>
 				</figure>

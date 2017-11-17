@@ -13,7 +13,7 @@
 			<main class="login-pane col-md-12 col-sm-12 col-xs-12">
 				<form name="loginForm" ng-submit="teste()" method="post" ng-controller="loginController">
 					<figure class="brand form-group col-md-12">
-						<a href="<?=base_url?>/application/views/main/main.php">
+						<a href="../main/main.php">
 							<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
 						</a>
 					</figure>
@@ -41,7 +41,7 @@
 						</div>
 						<div class="row">
 							<div class="password-alert col-md-6 align-center">
-								<a href="<?=base_url?>/application/views/cadastro/cadastro.php">Cadastro</a>
+								<a href="../cadastro/cadastro.php">Cadastro</a>
 							</div>
 						</div>
 					</div>

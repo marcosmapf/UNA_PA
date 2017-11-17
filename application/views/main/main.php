@@ -32,10 +32,10 @@
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item nav-menu active">
-            <a class="nav-link" href="<?=base_url?>/application/views/main/main.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../main/main.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
-            <a class="nav-link" href="<?=base_url?>/application/views/contato/contato.php">Contato<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../contato/contato.php">Contato<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
             <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
@@ -108,7 +108,7 @@
       <div class="teste1 col-md-12 col-sm-12 col-xs-12">
           <div class="row">
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-xs-12 col-12">
-              <a href="<?=base_url?>/application/views/produto/produto.php">
+              <a href="../produto/produto.php">
                 <img src="../../../assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.webp">
               </a>
               <h5>Bebedouro Prático Automático Cães e Gatos Azul Alvorada</h5>
