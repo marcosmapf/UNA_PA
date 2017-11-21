@@ -1,0 +1,137 @@
+/*html{
+  position: relative;
+  min-height: 100%;
+}
+*/
+
+body {
+  font-family:"Maven Pro", Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (max-width: 991px){
+	#precoFrete {
+		padding-top: 1rem;
+	}
+}
+
+/*Grid Containers*/
+
+.d-flex {
+	margin: 0;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	grid-template-areas:	"header"	
+							"produtos"
+							"entrega"
+							"pagamento"
+							"footer";
+	grid-row-gap: 20px;
+}
+
+
+#page-header-grid {
+	grid-area: header;
+	background: orangered;
+	height: 50px;
+}
+
+
+
+#page-header-grid .d-flex {
+	justify-content: space-between;
+}
+
+
+
+#produtos-grid {
+	grid-area: produtos;
+	display: grid;
+	grid-template-areas:	"produto-relacionado"	
+							"produto-adicionado";
+	grid-row-gap: 20px;
+}
+
+#produto-relacionado-grid {
+	grid-area: produto-relacionado;
+}
+
+#produto-relacionado-grid > p {
+	color: orangered;
+	font-size: 1.2rem;
+}
+
+#produto-adicionado-grid {
+	grid-area: produto-adicionado;
+}
+
+#produto-adicionado-grid > p{
+	color: orangered;
+	font-size: 1.5rem;
+}
+
+
+
+
+#entrega-grid {
+	grid-area: entrega;
+}
+
+#entrega-grid > .d-flex {
+	justify-content: flex-start;
+}
+
+
+#pagamento-grid {
+	grid-area: pagamento;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+}
+
+#entrega-grid .d-flex {
+	justify-content: space-between;
+}
+
+
+
+
+#pagamento-grid > .d-flex {
+	justify-content: flex-end;
+	text-align: right
+}
+
+#pagamento-grid button {
+	width: 200px;
+	height: 70px;
+	font-size: 20px;
+}
+
+
+
+
+#page-footer-grid {
+	grid-area: footer;
+	background: orangered;
+	height: 50px;
+}
+
+
+/* Elementos */
+
+.produto {
+	margin-bottom: 1rem;
+}
+
+.header-element {
+	align-self: center;
+}
