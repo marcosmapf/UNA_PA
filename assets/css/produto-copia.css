@@ -1,0 +1,114 @@
+body {
+    font-family:"Maven Pro",Helvetica,Arial,sans-serif;
+}
+
+footer {
+  position: relative;
+  top: 140px;
+  height: auto;
+  width: 100%;
+  background-color: #EF5666;
+}
+
+footer > li {
+  display: inline-block;
+}
+
+/*Media Queries*/
+
+@media (min-width: 1200px){
+  .medium-margin{
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1199px){
+  #imagem-produto {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .form-inline .form-control {
+      width: 23rem;
+    }
+}
+
+@media (max-width: 991px){
+  .nav-menu {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+  }
+}
+
+/*Navbar Section*/
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #EF5666;
+}
+
+.navbar-brand > img {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  width: 40px;
+}
+
+.nav-menu {
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+/*Outros elementos*/
+
+
+.card {
+  margin-top: 182px;
+}
+
+.fa {
+  color: #222222;
+  padding-right: 10px;
+}
+
+#imagem-produto {
+  width: 100%;
+}
+
+.info-pagamento > p {
+  margin-bottom: 0px;
+}
+
+.btn-danger {
+  font-size: 1.2rem;
+  box-shadow: 1px 1px 5px #888888
+}
+
+/*Utilitários*/
+
+.col-padding {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.small-padding{
+  padding: 20px;
+}
+
+.medium-padding{
+  padding: 40px;
+}
+
+.single-border{
+  border: solid 1px #000000
+}
+
+.padding-top {
+  margin-top: 15px;
+}
