@@ -11,6 +11,7 @@ appModule.controller('cadastroController', function($scope) {
 	$scope.enderecoCep;
 	$scope.enderecoEstado;
 	$scope.enderecoCidade;
+    $scope.enderecoBairro;
 	$scope.enderecoRua;
 	$scope.enderecoNumero;
 	$scope.enderecoComplemento;

@@ -5,110 +5,286 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  font-size: 0.9em;
   /*background-image: url('../imagens/acesso_background.jpg');*/
   background-repeat: repeat;
   margin: 0;
+}
+
+footer {
+  background-color: #EF5666;
+  color: white;
+}
+
+footer i {
+  padding-right: 10px;
 }
 
 a { 
   color: black;
 }
 
-h5  {
-  padding: 10px;
-
-}
-
-div > p {
+p.card-text {
   color: orange;
-  font-size: 1.3em;
-
 }
-
 
 .container {
-  width: 100%;
-  padding: 0  ;
+  width: 90%;
 }
 
 /*Navbar Section*/
 
 .navbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
   background-color: #EF5666;
 }
 
-.navbar-brand {
-	padding-right: 0px;
-	padding-left: 0px;
+.navbar-brand > img {
+  padding-right: 0px;
+  padding-left: 0px;
   margin-right: 0px;
+  width: 40px;
 }
 
-.nav-menu {
-   font-family:"Maven Pro",Helvetica,Arial,sans-serif;
-   padding-left: 5px;
-   padding-right: 5px;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   text-align: center;
+.fa {
+  color: #222222;
+}
+
+/*Outros elementos*/
+
+.card {
+  padding: 10px 10px;
+}
+
+.card:hover {
+  border: solid 1px #22899f;
+}
+
+.card p, .card h5 {
+  margin: 0;
 }
 
 .fa {
   color: black;
 }
 
-@media (min-width: 576px) {}
-  .form-inline .form-control {
-      width: 23rem;
-    }
+#search-form input {
+  width: 300px;
 }
 
-@media screen and (max-width: 1024px) {
-  #navbarMenu > ul > li {
-    border: solid 2px black;
+
+/*Banner Carousel Section*/
+
+
+@media screen and (min-width: 1200px){
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+  } 
+  .img-fluid {
+    height: 400px;
+  }
+  p.card-text {
+  font-size: 1.1em;
+  }
+
+  h5.card-text {
+    font-size: 1.2em;
+  }
+  #page-carousel{
+    margin-top: 45px;
   }
 }
 
-#carouselExampleIndicators{
-  padding-top: 65px;
+
+@media screen and (max-width: 1199px){
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+  }
+  .img-fluid {
+    height: 300px;
+  }
+  p.card-text {
+    font-size: 1em;
+  }
+
+  h5.card-text {
+    font-size: 1.1em;
+  }
+  #page-carousel{
+    margin-top: 45px;
+  }
 }
-/*Banner Carousel Section*/
+
+@media screen and (max-width: 991px){
+  .nav-menu {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+  }
+  .img-fluid {
+    height: 250px;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 35px;
+    width: 35px;
+    margin-top: 25px;
+  }
+  p.card-text {
+    font-size: 0.9em;
+  }
+
+  h5.card-text {
+    font-size: 1em;
+  }
+  #page-carousel{
+    margin-top: 40px;
+  }  
+}
+
+@media screen and (max-width: 767px){
+  .img-fluid {
+    height: 200px;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+  }
+  p.card-text {
+    font-size: 0.8em;
+  }
+
+  h5.card-text {
+    font-size: 0.9em;
+  }  
+}
+
+@media screen and (max-width: 576px){
+  .img-fluid {
+    height: 150px;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 20px;
+    width: 20px;
+    margin-top: 20px;
+  }
+  p.card-text {
+  font-size: 0.8em;
+  }
+
+  h5.card-text {
+    font-size: 0.8em;
+  }  
+}
 
 .carousel-inner > .carousel-item > img {
     margin: 0 auto;
     width: 100%;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  height: 50px;
-  width: 50px;
+/* Seção produtos */
+
+#produtos-grid > div > h5 {
+  color: #22899f;
 }
 
-.teste1 {
-  padding-top: 50px;
-  background-color: white;
+.row {
   text-align: center;
 }
-.teste1 img  {
-  padding-top: 2px;
-  border: solid 1px;
+
+#produtos-grid img  {
+  padding-top: 4px;
   width: 80%;
 }
 
-.teste1 img:visited {
-  text-decoration: none;
-  border-color: black;
+.card-block {
+  padding: 0;
 }
 
-.col-padding {
-  margin-left: 15px;
-  margin-right: 15px;
-  padding-left: 0px;
-  padding-right: 0px;
+div.card:not(.bordered) {
+  border: none;
 }
 
 
-/* Carousel Fade-in Effect */
+/* Page Grid */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:  "header"  
+                        "carousel"
+                        "grid-produtos"
+                        "footer";
+  grid-row-gap: 20px;
+}
+
+
+#page-header-grid {
+  grid-area: header;
+}
+
+
+#carousel-grid {
+  grid-area: carousel;
+}
+
+
+#produtos-grid {
+  grid-area: grid-produtos;
+  display: grid;
+  grid-template-areas:  "produtos-destaque-titulo"
+                        "produtos-destaque"
+                        "produtos-caes-titulo"  
+                        "produtos-caes"
+                        "produtos-gatos-titulo"
+                        "produtos-gatos"  
+                        "produtos-medicamentos-titulo"
+                        "produtos-medicamentos";
+  grid-row-gap: 20px;
+}
+
+#produtos-destaque-titulo-grid {
+  grid-area: produtos-destaque-titulo;
+}
+
+#produtos-destaque-grid {
+  margin: auto;
+  margin-top: -20px;
+  grid-area: produtos-destaque;
+}
+
+
+#produtos-caes-titulo-grid {
+  grid-area: produtos-caes-titulo;
+}
+
+#produtos-caes-grid {
+  margin-top: -20px;
+  grid-area: produtos-caes;
+}
+
+#produtos-gatos-titulo-grid {
+  grid-area: produtos-gatos-titulo;
+}
+
+#produtos-gatos-grid {
+  margin-top: -20px;
+  grid-area: produtos-gatos;
+}
+
+#produtos-medicamento-titulo-grid {
+  grid-area: produtos-medicamentos-titulo;
+}
+
+#produtos-medicamentos-grid {
+  margin-top: -20px;
+  grid-area: produtos-medicamentos;
+}
+
+#page-footer-grid {
+  grid-area: footer;
+}

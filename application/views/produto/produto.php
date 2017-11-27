@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../../assets/css/produto.css">
-	<title>Teste</title>	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../assets/css/produto.css">
+  <title>Teste</title>  
 </head>
 <body ng-app="appModule" ng-cloak>
 <!--Navbar section-->
   <header>
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+    <nav id="page-header" class="navbar navbar-toggleable-md navbar-inverse fixed-top">
       <!--Menu Colapsado-->
       <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
+      
+
       <!--Logo"-->
-      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png" width="10%"> Pet Stop</a>
+      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png"> Pet Stop</a>
+
       <!--Menu Central-->
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
@@ -34,7 +37,10 @@
             <a class="nav-link" href="#">Sobre Nós<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <!--Botões Laterais-->
+      </div>
+
+      <!--Menu Lateral-->
+      <div class="collapse navbar-collapse" id="navbarButtons">
         <div class="mt-md-0 ml-auto"></div>
         <ul class="navbar-nav">        
          <li class="nav-item" id="searchButton">
@@ -55,7 +61,12 @@
         </ul>        
       </div>
     </nav>
+
+
   </header>
+
+
+
   <div class="container">
     <form name="produtoForm" ng-submit="" method="post" ng-controller="produtoController">
       <section class="top-margin medium-padding card">
@@ -100,7 +111,7 @@
         <div></div>
       </div>
       <div class="mx-auto p-2">
-        <div><img class="img-fluid" src="../../../assets/imagens/logo-pequena.png"> Pet Stop</div>
+        <div><img class="img-fluid" src="../../../assets/imagens/logo-pequena-borda.png"> Pet Stop</div>
       </div>
       <div class="ml-auto p-2">
         <div>

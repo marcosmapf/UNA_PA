@@ -43,16 +43,19 @@
 					<div class="form-group col-md-8">
 						<input type="password" name="senhaUsuario" class="form-control" ngMinlength="7" placeholder="Senha" ng-model="senhaUsuario" onKeyPress="if(this.value.length==30) return false;" required>
 					</div>
-				</div>
-				<div class="row">
 					<div class="form-group col-md-4">
 						<input type="text" id="enderecoCep" class="form-control" placeholder="CEP" ng-model="enderecoCep" onKeyPress="if(this.value.length==8) return false;" ng-pattern="padraoCEP" ui-mask="99999-999" ui-mask-placeholder ui-mask-placeholder-char="_" required>
 					</div>
+				</div>
+				<div class="row">
 					<div class="form-group col-md-4">
 						<input type="text" name="enderecoEstado" id="uf" class="form-control" placeholder="Estado" ng-model="enderecoEstado" required>
 					</div>
 					<div class="form-group col-md-4">
 						<input type="text" name="enderecoCidade" id="cidade" class="form-control" placeholder="Cidade" ng-model="enderecoCidade" required>
+					</div>
+					<div class="form-group col-md-4">
+						<input type="text" name="enderecoBairro" id="bairro" class="form-control" placeholder="Bairro" ng-model="enderecoBairro" required>
 					</div>
 				</div>		
 				<div class="row">					

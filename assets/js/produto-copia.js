@@ -26,7 +26,6 @@ appModule.controller('produtoController', function($scope) {
   $('#searchButton').click(function () {
     if($('#searchForm').length){
       $('#searchForm').remove();
-      $("<div class='mt-md-0 ml-auto'>").insertBefore("#searchButton");
     }
     else 
       $("<form class='form-inline mt-md-0 ml-auto' id='searchForm'><input class='form-control' type='text' placeholder='Produto'></form>").insertBefore("#searchButton");

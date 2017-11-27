@@ -12,22 +12,54 @@
 <body>
 	<div class="wrapper">
 
-
 		<header id="page-header-grid">
-			<div class="container">
-				<div class="d-flex">
-					<div>
-						Logo
-					</div>
-					<div>
-						Menus
-					</div>
-					<div>
-						Botões Laterais
-					</div>
-				</div>
-			</div>
-		</header>
+		    <nav id="page-header" class="navbar navbar-toggleable-md navbar-inverse fixed-top">
+		      <!--Menu Colapsado-->
+		      <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+		      	<span class="navbar-toggler-icon"></span>
+		      </button>
+		      <!--Logo"-->
+		      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png"> Pet Stop</a>
+		      <!--Menu Central-->
+		      <div class="collapse navbar-collapse" id="navbarMenu">        
+		        <ul class="navbar-nav ml-auto">
+		          <li class="nav-item nav-menu active">
+		            <a class="nav-link" href="../main/main.php">Home<span class="sr-only">(current)</span></a>
+		          </li>
+		          <li class="nav-item nav-menu">
+		            <a class="nav-link" href="../contato/contato.php">Contato<span class="sr-only">(current)</span></a>
+		          </li>
+		          <li class="nav-item nav-menu">
+		            <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
+		          </li>
+		          <li class="nav-item nav-menu">
+		            <a class="nav-link" href="#">Sobre Nós<span class="sr-only">(current)</span></a>
+		          </li>
+		        </ul>
+		      </div>
+		      <!--Botões Laterais-->
+		      <div class="collapse navbar-collapse" id="navbarButtons">
+		        <div class="mt-md-0 ml-auto"></div>
+		        <ul class="navbar-nav">        
+					<li id="botao-busca" class="nav-item">
+						<a class="nav-link" href="#">
+							<i class="fa fa-search fa-2x" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li id="carrinho-compras" class="nav-item">
+						<a class="nav-link" href="#">
+							<img src="../../../assets/imagens/shopping-cart.png" alt="Shop-Cart" width="90%">   
+						</a>      
+					</li>
+					<li id="imagem-login" class="nav-item">
+						<a class="nav-link" href="../login/login.php">
+							<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>        
+		      </div>
+		    </nav>
+		</header>	
 
 
 		<div id="produtos-grid" class="container">
@@ -111,18 +143,22 @@
 			</div>
 		</section>
 
-		<footer id="page-footer-grid" data-size="5">
-			<div class="container">
-				<div class="d-flex">
-					<div class="ml-0 mr-auto"></div>
-					<div class="mx-auto">
-						Logo-Pequena
-					</div>
-					<div class="ml-auto">
-						Redes-Sociais
-					</div>
-				</div>
-			</div>
+		<footer id="page-footer-grid" class="d-inline-flex">
+		  <!--<img src="../../../assets/imagens/logoVermelho3.png" width="2.5%">-->
+		  <div class="mr-auto p-2">
+		    <div></div>
+		  </div>
+		  <div class="mx-auto p-2">
+		    <div><img id="logo-reduzida" src="../../../assets/imagens/logo-pequena.png"> Pet Stop</div>
+		  </div>
+		  <div class="ml-auto p-2">
+		    <div>
+		      <a href="" id="facebook_connection">
+		        <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+		        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+		      </a>
+		    </div>
+		  </div>
 		</footer>
 
 	</div>

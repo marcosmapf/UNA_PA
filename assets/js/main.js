@@ -1,11 +1,11 @@
   $(document).ready(function () {
-  $('#searchButton').click(function () {
-    if($('#searchForm').length){
-      $('#searchForm').remove();
-      $("<div class='mt-md-0 ml-auto'>").insertBefore("#searchButton");
+  $('#search-button').click(function () {
+    if($('#search-form').length){
+      $('#search-form').remove();
+      $("<div class='mt-md-0 ml-auto'>").insertBefore("#search-button");
     }
     else 
-      $("<form class='form-inline mt-md-0 ml-auto' id='searchForm'><input class='form-control' type='text' placeholder='Produto'></form>").insertBefore("#searchButton");
+      $("<form class='form-inline mt-md-0 mx-auto' id='search-form'><input class='form-control' type='text' placeholder='Produto'></form>").insertBefore("#search-button");
   });
 });
 
