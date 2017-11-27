@@ -50,18 +50,6 @@ p.card-text {
 
 /*Outros elementos*/
 
-.card {
-  padding: 10px 10px;
-}
-
-.card:hover {
-  border: solid 1px #22899f;
-}
-
-.card p, .card h5 {
-  margin: 0;
-}
-
 .fa {
   color: black;
 }
@@ -204,8 +192,20 @@ p.card-text {
   padding: 0;
 }
 
+.card {
+  padding: 10px 10px;
+}
+
+.card p, .card h5 {
+  margin: 0;
+}
+
 div.card:not(.bordered) {
   border: none;
+}
+
+div.card:hover {
+  border: solid 1px #22899f;
 }
 
 
