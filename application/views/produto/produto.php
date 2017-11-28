@@ -90,7 +90,7 @@
                     <option ng-repeat="option in quantidadeProdutos" ng-value="option.value">{{option.name}}</option>
                   </select></br></br>
                   -->
-                  <button class="btn btn-danger" width="200%">Comprar</button><br><br>
+                  <a href="<?=base_url()?>/index.php/produto/adicionarCarrinho/777" class="btn btn-danger" width="200%">Adicionar ao carrinho</a><br><br>
                   <div class="info-pagamento text-left">
                     <img src="../../../assets/imagens/cartao-credito.png" width="8%"> R$ {{precoProduto*0.9 | number : 2}} no boleto bancário (10% de desconto)
                     <p><img src="../../../assets/imagens/codigo-barras.png"  width="8%"> R$ {{precoProduto | number : 2}} em até 8x de {{precoProduto/8  | number : 2}} sem juros</p>

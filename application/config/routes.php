@@ -52,3 +52,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'main/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['auxi/icmsporestado/inclusao']['GET'] = 'auxi/icmsporestado_controller/inclusao';

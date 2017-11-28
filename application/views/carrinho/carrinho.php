@@ -96,21 +96,25 @@
 			<section id="produto-adicionado-grid"><!--Produtos adicionados ao carrinho-->
 				<p>Sacola de produtos<p>
 				<!--Modelo de produto adicionado-->
-				<div class="produto card">
-					<p>Produto Adicionado 1</p>
-					<figure></figure>
-					<figcaption></figcaption>
-				</div>
-				<div class="produto card">
-					<p>Produto Adicionado 2</p>
-					<figure></figure>
-					<figcaption></figcaption>
-				</div>
-				<div class="produto card">
-					<p>Produto Adicionado 3</p>
-					<figure></figure>
-					<figcaption></figcaption>
-				</div>
+
+				<?php
+				if(!empty($carrinho)){ 
+					foreach($carrinho as $produto){
+						print_r($produto);
+					?>
+						<div class="produto card">
+							<p>Produto Adicionado <?=$produto["id"]?></p>
+							<figure></figure>
+							<figcaption></figcaption>
+						</div>
+				<?php 
+					}
+				}else{
+				?>
+					<h4>Nenhum produto adicionado ao carrinho!</h4>
+				<?php
+				}
+				?>
 			</section>
 
 

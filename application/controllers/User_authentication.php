@@ -65,4 +65,8 @@ class User_Authentication extends CI_Controller
         // Redirect to login page
         redirect('/user_authentication');
     }
+
+    public function cadastro(){
+        $this->load->view("cadastro/cadastro");
+    }
 }
