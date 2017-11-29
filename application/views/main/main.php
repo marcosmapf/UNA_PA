@@ -137,7 +137,7 @@
 
         <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/5">
+            <a href="<?=base_url()?>index.php/produto/visualizar/5">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -157,7 +157,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/2">
+            <a href="<?=base_url()?>index.php/produto/visualizar/2">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -170,7 +170,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/5">
+            <a href="<?=base_url()?>index.php/produto/visualizar/5">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -183,7 +183,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/17">
+            <a href="<?=base_url()?>index.php/produto/visualizar/17">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -196,7 +196,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/4">
+            <a href="<?=base_url()?>index.php/produto/visualizar/4">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/casa-mega-fácil-azul-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -208,7 +208,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/9">
+            <a href="<?=base_url()?>index.php/produto/visualizar/9">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -220,7 +220,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/11">
+            <a href="<?=base_url()?>index.php/produto/visualizar/11">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -244,7 +244,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
+            <a href="<?=base_url()?>index.php/produto/visualizar/15">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -257,7 +257,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/16">
+            <a href="<?=base_url()?>index.php/produto/visualizar/16">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-para-gatos-com-catnip-jambo.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -269,7 +269,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/1">
+            <a href="<?=base_url()?>index.php/produto/visualizar/1">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -281,7 +281,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/6">
+            <a href="<?=base_url()?>index.php/produto/visualizar/6">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-hills-felino-senior-11-age-defying-3kg.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -293,7 +293,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/2">
+            <a href="<?=base_url()?>index.php/produto/visualizar/2">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-vermelho-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -305,7 +305,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/18">
+            <a href="<?=base_url()?>index.php/produto/visualizar/18">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/rasqueadeira-pratica-vermelha-chalesco.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -328,7 +328,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
+            <a href="<?=base_url()?>index.php/produto/visualizar/15">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -341,7 +341,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/19">
+            <a href="<?=base_url()?>index.php/produto/visualizar/19">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/xixi-aqui-pet-clean-30ml.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -353,7 +353,7 @@
 
          <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/8">
+            <a href="<?=base_url()?>index.php/produto/visualizar/8">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/neodexa-spray-74g-coveli.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -366,7 +366,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/20">
+            <a href="<?=base_url()?>index.php/produto/visualizar/20">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/butox-20-ml-pulverização-intervet.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -378,7 +378,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/7">
+            <a href="<?=base_url()?>index.php/produto/visualizar/7">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/shampoo-cortishamp-125ml-agener.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -390,7 +390,7 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/10">
+            <a href="<?=base_url()?>index.php/produto/visualizar/10">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/gerioox-labyes.jpg" alt="Imagem Produto">
             </a>
           </div>

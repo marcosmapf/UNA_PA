@@ -69,7 +69,7 @@
 
 			<div id="dev-marina" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-marina.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-marina.png">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
