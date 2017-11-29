@@ -19,7 +19,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<!--Logo"-->
-				<a class="navbar-brand" href="#">.<img src="<?=base_url();?>/assets/imagens/logo-borda.png"> Pet Stop</a>
+				<a class="navbar-brand" href="#"><img src="<?=base_url();?>/assets/imagens/logo-borda.png"> Pet Stop</a>
 				<!--Menu Central-->
 				<div class="collapse navbar-collapse" id="navbarMenu">        
 					<ul class="navbar-nav ml-auto">

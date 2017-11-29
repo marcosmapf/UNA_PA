@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Teste</title>
+	<title>Sobre nós</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
-	<link rel="stylesheet" href="../../../assets/css/about.css"> <!--Local Stylesheet Import-->
+	<link rel="stylesheet" href="<?=base_url()?>/assets/css/about.css"> <!--Local Stylesheet Import-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--Material Icons Font-->
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
@@ -16,8 +16,8 @@
 
 		<div class="row descricao-projeto">
 			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12">
-				<a href="../main/main.php">
-					<img src="../../../assets/imagens/logo-media.png">
+				<a href="<?=base_url();?>/index.php/main/index">
+					<img src="<?=base_url()?>/assets/imagens/logo-media.png">
 				</a>
 			</div>
 			<div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 col-12">
@@ -30,7 +30,7 @@
 
 			<div id="dev-felippe" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="../../../assets/imagens/foto-felippe.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-felippe.jpg">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
@@ -49,7 +49,7 @@
 
 			<div id="dev-marcos" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="../../../assets/imagens/foto-marcos.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-marcos.jpg">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
@@ -69,7 +69,7 @@
 
 			<div id="dev-marina" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="../../../assets/imagens/foto-marina.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-marina.jpg">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
@@ -87,7 +87,7 @@
 
 			<div id="dev-messias" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="../../../assets/imagens/foto-messias.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-messias.jpg">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
@@ -105,7 +105,7 @@
 
 			<div id="dev-valdirene" class="dev-card">
 				<div class="dev-img">
-					<img class="foto-desenvolvedor" src="../../../assets/imagens/foto-valdirene.jpg">
+					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-valdirene.jpg">
 				</div>
 				<div class="dev-info">
 					<div class="product-text">
@@ -126,14 +126,14 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-<script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-<script src="../../../assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-<script src="../../../assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-<script src="../../../assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-<script src="../../../assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
-<script src="../../../assets/node_modules/angular-ui-mask/dist/mask.js"></script>
+<script src="<?=base_url()?>/assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+<script src="<?=base_url()?>/assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
+<script src="<?=base_url()?>/assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
+<script src="<?=base_url()?>/assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
+<script src="<?=base_url()?>/assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
+<script src="<?=base_url()?>/assets/node_modules/angular-ui-mask/dist/mask.js"></script>
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-<script type="text/javascript" src="../../../assets/js/cadastro.js"></script> <!--Local Javascript Import-->
+<script type="text/javascript" src="<?=base_url()?>/assets/js/cadastro.js"></script> <!--Local Javascript Import-->
 </html>
 
 <!-- 

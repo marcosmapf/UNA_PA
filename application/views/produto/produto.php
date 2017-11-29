@@ -19,22 +19,22 @@
       
 
       <!--Logo"-->
-      <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png"> Pet Stop</a>
+      <a class="navbar-brand" href="#"><img src="<?=base_url();?>/assets/imagens/logo-borda.png"> Pet Stop</a>
 
       <!--Menu Central-->
       <div class="collapse navbar-collapse" id="navbarMenu">        
         <ul class="navbar-nav ml-auto">
           <li class="nav-item nav-menu active">
-            <a class="nav-link" href="../main/main.php">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url();?>index.php/main/index">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
-            <a class="nav-link" href="../contato/contato.php">Contato<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url();?>index.php/main/contato">Contato<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
             <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item nav-menu">
-            <a class="nav-link" href="#">Sobre Nós<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url();?>index.php/main/about">Sobre Nós<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
@@ -50,11 +50,11 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-            <img src="../../../assets/imagens/shopping-cart.png" alt="Shop-Cart">   
+            <img src="<?=base_url();?>/assets/imagens/shopping-cart.png" alt="Shop-Cart">   
             </a>      
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../login/login.php">
+            <a class="nav-link" href="<?=base_url();?>/index.php/user_authentication/index">
             <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
             </a>
           </li>

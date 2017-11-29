@@ -18,7 +18,7 @@ class Produto extends CI_Controller
     	
     	$this->session->set_userdata("carrinho", $carrinho);
 
-        $this->load->model("carrinho_model", "carrinho");
+        $this->load->model("carrinho_Model", "carrinho");
     	
         $produtos = array();
         foreach($carrinho as $produto){
