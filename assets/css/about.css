@@ -1,0 +1,105 @@
+body {
+  background: url("../imagens/main-background-claro.png");
+  font-size: 1em;
+}
+
+a {
+	color: lightgray;
+}
+
+a:hover {
+	text-decoration: none;
+	color: lightgray;
+}
+
+.descricao-projeto {
+	font-family: "Book Antiqua", "Palatino", serif;
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (min-width: 992px){
+	h5{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 991px){
+	.descricao-projeto {
+		text-align: center;
+		padding-left: 10px;
+	}
+	.descricao-projeto img {
+		
+		margin-bottom: 20px;
+	}
+}
+
+.card {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.dev-card {
+	margin: 5px;
+	display: flex;
+	align-items: center;
+	height:250px;
+}
+
+.dev-card p {
+	font-size: 0.8rem;
+}
+
+.dev-img {
+	padding: 0 30px;
+	border-right: 1px solid black;
+}
+
+.foto-desenvolvedor {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.dev-info {
+	position: relative;
+	width: 400px;
+	height: 250px;
+	padding: 20px;
+	color: lightgray;
+}
+
+#dev-felippe {
+	background-color: #063554;
+	box-shadow: inset 6px -6px 30px 0px rgba(2,26,48,1);	
+}
+
+#dev-marcos {	
+	background-color: #821111;
+	box-shadow: inset 6px -6px 30px 0px rgba(77,10,11,1);
+}
+
+#dev-marina {
+	background-color: #214202;
+	box-shadow: inset 6px -6px 30px 0px rgba(17,41,1,1);
+}
+
+#dev-messias {
+	background-color: #804109;
+	box-shadow: inset 6px -6px 30px 0px rgba(77,39,4,1);
+}
+
+#dev-valdirene {
+	background-color: #3b3b3b;
+	box-shadow: inset 6px -6px 30px 0px rgba(38,38,38,1);	
+}
+
+.social-media {
+	position: absolute;
+	bottom: 20px;
+}

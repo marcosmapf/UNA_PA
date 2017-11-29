@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="../../../assets/css/produto.css">
-  <title>Teste</title>  
+  <title>Visualizar produto</title>  
 </head>
 <body ng-app="appModule" ng-cloak>
 <!--Navbar section-->
@@ -73,31 +73,31 @@
           <div class="row">
 
             <div class="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <img id="imagem-produto" ng-src="{{imagemProduto}}"></img>
+              <img id="imagem-produto" ng-src="<?=base_url();?>/assets/imagens/produtos/<?=$produto->imagem?>"></img>
             </div>
 
             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
               <div class="medium-margin">
                 <div>
-                  <h2>{{nomeProduto}}</h2>
+                  <h2><?= $produto->nome;?></h2>
                 </div>
 
                 <div class="single-border small-padding text-center">
                   <p><strong>Vendido e entregue por PetStop</strong></p>
-                  <h3>R$ {{precoProduto}}</h3><br>
+                  <h3>R$ <?= $produto->preco?></h3><br>
                   <!--
                   <select name="quantidadeProdutos" ng-model="quantidadeSelecionada" required>
                     <option ng-repeat="option in quantidadeProdutos" ng-value="option.value">{{option.name}}</option>
                   </select></br></br>
                   -->
-                  <a href="<?=base_url()?>/index.php/produto/adicionarCarrinho/777" class="btn btn-danger" width="200%">Adicionar ao carrinho</a><br><br>
+                  <a href="<?=base_url()?>/index.php/produto/adicionarCarrinho/<?= $produto->codigoProduto;?>" class="btn btn-danger" width="200%">Adicionar ao carrinho</a><br><br>
                   <div class="info-pagamento text-left">
-                    <img src="../../../assets/imagens/cartao-credito.png" width="8%"> R$ {{precoProduto*0.9 | number : 2}} no boleto bancário (10% de desconto)
-                    <p><img src="../../../assets/imagens/codigo-barras.png"  width="8%"> R$ {{precoProduto | number : 2}} em até 8x de {{precoProduto/8  | number : 2}} sem juros</p>
+                    <img src="../../../assets/imagens/codigo-barras.png" width="8%"> R$ <?= ($produto->preco*0.9);?> no boleto bancário (10% de desconto)
+                    <p><img src="../../../assets/imagens/cartao-credito.png"  width="8%"> R$ <?= $produto->preco;?> em até 5x de R$<?= ($produto->preco/5)?> sem juros</p>
                   </div>
                 </div>              
                 <div>
-                  <br><p>Com o Bebedouro Prático, sempre que o nível de água baixar, é reabastecido automaticamente pelo reservatório que precisa conter água.<br/><br/>É ideal para animais de pequeno porte.<br/><br/>Desmontável, facilita a higienização e abastecimento</p>
+                  <br><p><?= $produto->descricao;?></p>
                 </div>
               </div>
             </div>
@@ -111,7 +111,7 @@
         <div></div>
       </div>
       <div class="mx-auto p-2">
-        <div><img class="img-fluid" src="../../../assets/imagens/logo-pequena-borda.png"> Pet Stop</div>
+        <div><img class="img-fluid" src="<?=base_url();?>/assets/imagens/logo-pequena-borda.png"> Pet Stop</div>
       </div>
       <div class="ml-auto p-2">
         <div>

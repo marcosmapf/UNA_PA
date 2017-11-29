@@ -11,10 +11,28 @@ body {
   height: 100%;
 }
 
+.produto input {
+	text-align: center;
+}
 
 @media (max-width: 991px){
 	#precoFrete {
 		padding-top: 1rem;
+	}
+	.produto-descricao {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 575px){
+	#produto-adicionado-grid .col-12 {
+		margin-top: 20px;
+	}
+}
+
+@media (min-width: 992px){
+	.produto-descricao {
+		justify-content: flex-start;
 	}
 }
 
@@ -62,6 +80,7 @@ body {
 }
 
 #produto-relacionado-grid {
+	margin-top: 70px;
 	grid-area: produto-relacionado;
 }
 
@@ -69,6 +88,15 @@ body {
 	color: orangered;
 	font-size: 1.2rem;
 }
+
+.produto-sugerido {
+	text-align: center;
+}
+
+.produto-sugerido figcaption {
+	color: orange;
+}
+
 
 #produto-adicionado-grid {
 	grid-area: produto-adicionado;
@@ -80,13 +108,11 @@ body {
 }
 
 
-
-
 #entrega-grid {
 	grid-area: entrega;
 }
 
-#entrega-grid > .d-flex {
+#entrega-grid > .d-flex{
 	justify-content: flex-start;
 }
 
@@ -125,6 +151,7 @@ body {
 /* Elementos */
 
 .produto {
+	padding: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -169,4 +196,25 @@ footer {
 
 footer i {
 	padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+.v-center{
+	height: 90%;
+	align-items: center;
+}
+
+.produto-descricao {
+	height: 100%;
+	align-items: center;
+}
+
+.flex-column p {
+	margin-bottom: 0;
 }

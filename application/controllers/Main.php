@@ -8,4 +8,15 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('main/main');
 	}
+
+	public function contato()
+	{
+		$this->load->view('contato/contato');
+	}
+
+	public function about()
+	{
+		$this->load->view('about/about');
+	}
+
 }

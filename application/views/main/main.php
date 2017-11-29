@@ -5,16 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../../assets/css/main.css">
+	<link rel="stylesheet" href="<?=base_url()?>/assets/css/main.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-  <script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-  <script src="../../../assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-  <script src="../../../assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-  <script src="../../../assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-  <script src="../../../assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
+  <script src="<?=base_url()?>/assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+  <script src="<?=base_url()?>/assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
+  <script src="<?=base_url()?>/assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
+  <script src="<?=base_url()?>/assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
+  <script src="<?=base_url()?>/assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
   <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-	<script type="text/javascript" src="../../../assets/js/main.js"></script>
+	<script type="text/javascript" src="<?=base_url()?>/assets/js/main.js"></script>
 	<title>Pet Stop</title>	
 </head>
 <body>
@@ -27,7 +27,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <!--Logo"-->
-        <a class="navbar-brand" href="#"><img src="../../../assets/imagens/logo-borda.png"> Pet Stop</a>
+        <a class="navbar-brand" href="#"><img src="<?=base_url()?>/assets/imagens/logo-borda.png"> Pet Stop</a>
         <!--Menu Central-->
         <div class="collapse navbar-collapse" id="navbarMenu">        
           <ul class="navbar-nav ml-auto">
@@ -56,7 +56,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img src="../../../assets/imagens/shopping-cart.png" alt="Shop-Cart">   
+                <img src="<?=base_url()?>/assets/imagens/shopping-cart.png" alt="Shop-Cart">   
               </a>      
             </li>
             <li class="nav-item">
@@ -78,16 +78,16 @@
         </ol>
         <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-            <img class="d-block img-fluid" src="../../../assets/imagens/banner01.webp" alt="Primeiro banner">
+            <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner01.webp" alt="Primeiro banner">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="../../../assets/imagens/banner02.webp" alt="Segundo banner">
+          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner02.webp" alt="Segundo banner">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="../../../assets/imagens/banner03.webp" alt="Terceiro banner">
+          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner03.webp" alt="Terceiro banner">
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="../../../assets/imagens/banner04.webp" alt="Quarto banner">
+          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner04.webp" alt="Quarto banner">
         </div>
         </div>
         <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
@@ -113,8 +113,8 @@
 
         <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/cama-suiça-bege-bichinho-chic.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/17">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -125,8 +125,8 @@
 
         <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/1">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -137,8 +137,8 @@
 
         <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/5">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -157,8 +157,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/2">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -170,8 +170,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/5">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -183,8 +183,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/cama-suiça-bege-bichinho-chic.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/17">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -196,8 +196,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/casa-mega-fácil-azul-alvorada.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/4">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/casa-mega-fácil-azul-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -208,8 +208,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/9">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -220,8 +220,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/11">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -244,8 +244,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/cat-nip-120-ml-petmais.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -257,8 +257,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/brinquedo-para-gatos-com-catnip-jambo.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/16">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-para-gatos-com-catnip-jambo.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -269,8 +269,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/1">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -281,8 +281,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/racao-hills-felino-senior-11-age-defying-3kg.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/6">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-hills-felino-senior-11-age-defying-3kg.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -293,8 +293,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-vermelho-alvorada.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/2">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-vermelho-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -305,8 +305,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/rasqueadeira-pratica-vermelha-chalesco.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/18">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/rasqueadeira-pratica-vermelha-chalesco.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -328,8 +328,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/cat-nip-120-ml-petmais.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -341,8 +341,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/xixi-aqui-pet-clean-30ml.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/19">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/xixi-aqui-pet-clean-30ml.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -353,8 +353,8 @@
 
          <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/neodexa-spray-74g-coveli.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/8">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/neodexa-spray-74g-coveli.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -366,8 +366,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/butox-20-ml-pulverização-intervet.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/20">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/butox-20-ml-pulverização-intervet.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -378,8 +378,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/shampoo-cortishamp-125ml-agener.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/7">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/shampoo-cortishamp-125ml-agener.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -390,8 +390,8 @@
 
         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
           <div>
-            <a href="../produto/produto.php">
-              <img class="card-img-top" src="../../../assets/imagens/produtos/gerioox-labyes.webp" alt="Imagem Produto">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/10">
+              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/gerioox-labyes.jpg" alt="Imagem Produto">
             </a>
           </div>
           <div class="card-block">
@@ -411,7 +411,7 @@
         <div></div>
       </div>
       <div class="mx-auto p-2">
-        <div><img id="logo-reduzida" src="../../../assets/imagens/logo-pequena-borda.png"> Pet Stop</div>
+        <div><img id="logo-reduzida" src="<?=base_url()?>/assets/imagens/logo-pequena-borda.png"> Pet Stop</div>
       </div>
       <div class="ml-auto p-2">
         <div>
