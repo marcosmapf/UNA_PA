@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Teste</title>
+	<title>Cadastro</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
-	<link rel="stylesheet" href="../../../assets/css/cadastro.css"> <!--Local Stylesheet Import-->
+	<link rel="stylesheet" href="<?=base_url();?>/assets/css/cadastro.css"> <!--Local Stylesheet Import-->
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body ng-app="appModule" ng-cloak>
@@ -14,7 +14,7 @@
 		<main class="cadastro-pane col-md-12 col-sm-12 col-xs-12">
 			<form name="cadastroForm" ng-submit="teste()" method="post" ng-controller="cadastroController">				
 				<figure class="brand form-group">
-					<a href="../login/login.php">
+					<a href="<?=base_url();?>index.php/user_authentication/index">
 						<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
 					</a>
 				</figure>
@@ -81,14 +81,14 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-<script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-<script src="../../../assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-<script src="../../../assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-<script src="../../../assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-<script src="../../../assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
-<script src="../../../assets/node_modules/angular-ui-mask/dist/mask.js"></script>
+<script src="<?=base_url();?>/assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+<script src="<?=base_url();?>/assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
+<script src="<?=base_url();?>/assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
+<script src="<?=base_url();?>/assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
+<script src="<?=base_url();?>/assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
+<script src="<?=base_url();?>/assets/node_modules/angular-ui-mask/dist/mask.js"></script>
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-<script type="text/javascript" src="../../../assets/js/cadastro.js"></script> <!--Local Javascript Import-->
+<script type="text/javascript" src="<?=base_url();?>/assets/js/cadastro.js"></script> <!--Local Javascript Import-->
 </html>
 
 <!-- 
