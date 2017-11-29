@@ -113,8 +113,8 @@
 									<h5>Produto</h5>
 								</div>
 								<figure>
-									<!--<img src="<?=base_url();?>/assets/imagens/produtos/<?=$produto->imagem;?>" alt="Imagem Produto" width="100%">-->
-									<img src="<?=base_url();?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto" width="100%">
+									<img src="<?=base_url();?>/assets/imagens/produtos/<?=$produto->imagem;?>" alt="Imagem Produto" width="100%">
+									<!--<img src="<?=base_url();?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto" width="100%">-->
 								</figure>
 							</div>
 							<div class="col-xl-4 col-lg-4 col-md-8 col-sm-6 col-xs-12 col-12">
