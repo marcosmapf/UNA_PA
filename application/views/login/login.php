@@ -13,7 +13,7 @@
 			<main class="login-pane col-md-12 col-sm-12 col-xs-12">
 				<form name="loginForm" ng-submit="teste()" method="post" ng-controller="loginController">
 					<figure class="brand form-group col-md-12">
-						<a href="<?=base_url();?>index.php/user_authentication/index">
+						<a href="<?=base_url();?>index.php/main/index">
 							<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
 						</a>
 					</figure>
