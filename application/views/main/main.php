@@ -27,21 +27,21 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <!--Logo"-->
-        <a class="navbar-brand" href="#"><img src="<?=base_url()?>/assets/imagens/logo-borda.png"> Pet Stop</a>
+        <a class="navbar-brand" href="#"><img src="<?=base_url()?>assets/imagens/logo-borda.png"> Pet Stop</a>
         <!--Menu Central-->
         <div class="collapse navbar-collapse" id="navbarMenu">        
           <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-menu active">
-              <a class="nav-link" href="<?=base_url();?>/index.php/main/index">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>index.php/main/index">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
-              <a class="nav-link" href="<?=base_url();?>/index.php/main/contato">Contato<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>index.php/main/contato">Contato<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
               <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
-              <a class="nav-link" href="<?=base_url();?>/index.php/main/about">Sobre Nós<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>index.php/main/about">Sobre Nós<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img src="<?=base_url()?>/assets/imagens/shopping-cart.png" alt="Shop-Cart">   
+                <img src="<?=base_url()?>assets/imagens/shopping-cart.png" alt="Shop-Cart">   
               </a>      
             </li>
             <li class="nav-item">
@@ -125,7 +125,7 @@
 
         <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
           <div>
-            <a href="<?=base_url()?>/index.php/produto/visualizar/1">
+            <a href="<?=base_url()?>index.php/produto/visualizar/1">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
             </a>
           </div>
