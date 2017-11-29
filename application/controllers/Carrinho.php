@@ -4,7 +4,7 @@ class Carrinho extends CI_Controller
     function __construct() {
         parent::__construct();
 
-        $this->load->model("carrinho_model", "carrinho");
+        $this->load->model("carrinho_Model", "carrinho");
     }
 
     public function consultar(){
