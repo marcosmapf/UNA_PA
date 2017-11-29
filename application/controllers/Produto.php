@@ -4,7 +4,7 @@ class Produto extends CI_Controller
     function __construct() {
         parent::__construct();
 
-        $this->load->model('produto_model', 'produto');
+        $this->load->model('produto_Model', 'produto');
     }
 
     public function adicionarCarrinho($idProduto){  	
