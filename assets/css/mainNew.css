@@ -1,0 +1,85 @@
+/*Overall settings*/
+
+/*
+body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+*/
+
+  #produtos-grid img  {
+    padding-top: 4px;
+    width: 200px;
+  }
+  
+/* Page Grid */
+
+.wrapper {
+    display: grid;
+    grid-template-areas:    "header"  
+                            "carousel"
+                            "grid-produtos"
+                            "footer";
+    grid-row-gap: 20px;
+}
+
+#page-header-grid {grid-area: header;}  
+
+#carousel-grid {grid-area: carousel;}  
+
+#produtos-grid {
+    grid-area: grid-produtos;
+    display: grid;
+    grid-template-areas:    "produtos-destaque-titulo"
+                            "produtos-destaque"
+                            "produtos-caes-titulo"  
+                            "produtos-caes" 
+                            "produtos-gatos-titulo"
+                            "produtos-gatos"
+                            "produtos-medicamentos-titulo"
+                            "produtos-medicamentos";
+    grid-row-gap: 20px;
+}
+
+#produtos-destaque-titulo-grid {
+    grid-area: produtos-destaque-titulo;
+}
+
+#produtos-destaque-grid {
+    grid-area: produtos-destaque;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 225px);
+    text-align: center;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+#produtos-caes-titulo-grid {
+    grid-area: produtos-caes-titulo;
+}
+
+#produtos-caes-grid {
+    grid-area: produtos-caes;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, min-content);
+    margin: auto;
+}
+
+#produtos-gatos-grid {
+    /*margin-top: -20px;*/
+    grid-area: produtos-gatos;
+}
+
+#produtos-medicamentos-grid {
+    /*margin-top: -20px;*/
+    grid-area: produtos-medicamentos;
+}
+
+#page-footer-grid {
+    grid-area: footer;
+}
+
+
