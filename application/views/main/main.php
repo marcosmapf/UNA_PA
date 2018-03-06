@@ -18,7 +18,8 @@
 	<title>Pet Stop</title>	
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrapper"> <!--wrapper da pagina para determinar a grid-->
+
     <!--Navbar section-->
     <header>
       <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
@@ -26,22 +27,22 @@
         <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!--Logo"-->
-        <a class="navbar-brand" href="#"><img src="<?=base_url()?>assets/imagens/logo-borda.png"> Pet Stop</a>
+        <!--Logo-->
+        <a class="navbar-brand" href="#"><img src="<?=base_url()?>/assets/imagens/logo-borda.png"> Pet Stop</a>
         <!--Menu Central-->
         <div class="collapse navbar-collapse" id="navbarMenu">        
           <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-menu active">
-              <a class="nav-link" href="<?=base_url();?>index.php/main/index">Home<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>/index.php/main/index">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
-              <a class="nav-link" href="<?=base_url();?>index.php/main/contato">Contato<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>/index.php/main/contato">Contato<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
               <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item nav-menu">
-              <a class="nav-link" href="<?=base_url();?>index.php/main/about">Sobre Nós<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="<?=base_url();?>/index.php/main/about">Sobre Nós<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -56,11 +57,11 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <img src="<?=base_url()?>assets/imagens/shopping-cart.png" alt="Shop-Cart">   
+                <img src="<?=base_url()?>/assets/imagens/shopping-cart.png" alt="Shop-Cart">   
               </a>      
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=base_url();?>index.php/user_authentication/index">
+              <a class="nav-link" href="<?=base_url();?>/index.php/user_authentication/index">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
               </a>
             </li>
@@ -68,8 +69,9 @@
         </div>
       </nav>
     </header>
+
     <!--Carousel Section-->
-    <section class="carousel-grid">
+    <section id="carousel-grid">
       <div id="page-carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#page-carousel" data-slide-to="0" class="active"></li>
@@ -77,18 +79,18 @@
             <li data-target="#page-carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-            <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner01.webp" alt="Primeiro banner">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner02.webp" alt="Segundo banner">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner03.webp" alt="Terceiro banner">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner04.webp" alt="Quarto banner">
-        </div>
+          <div class="carousel-item active">
+              <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner01.webp" alt="Primeiro banner">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner02.webp" alt="Segundo banner">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner03.webp" alt="Terceiro banner">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block img-fluid" src="<?=base_url()?>/assets/imagens/banner04.webp" alt="Quarto banner">
+          </div>
         </div>
         <a class="carousel-control-prev" href="#page-carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -100,8 +102,9 @@
         </a>
       </div>
     </section>
-      <!--Item Grid Section-->
-    <main id="produtos-grid" class="container">
+
+
+    <main class="container" id="produtos-grid">  <!--Container para os produtos da loja -->
 
 
       <div id="produtos-destaque-titulo-grid">
@@ -109,9 +112,9 @@
         <hr>
       </div>
 
-      <div id="produtos-destaque-grid" class="row col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 col-12">
+      <div id="produtos-destaque-grid" class="row">
 
-        <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+        <div class="card bordered">
           <div>
             <a href="<?=base_url()?>/index.php/produto/visualizar/17">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
@@ -123,7 +126,7 @@
           </div>
         </div>
 
-        <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+        <div class="card bordered">
           <div>
             <a href="<?=base_url()?>index.php/produto/visualizar/1">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
@@ -135,7 +138,7 @@
           </div>
         </div>
 
-        <div class="card bordered col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+        <div class="card bordered">
           <div>
             <a href="<?=base_url()?>index.php/produto/visualizar/5">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
@@ -146,105 +149,104 @@
             <p class="card-text">a partir de: R$ 37,90</p>
           </div>
         </div>
-      </div>
 
-      <div id="produtos-caes-titulo-grid">
+      </div>  
+
+      <div id="produtos-caes-titulo-grid">   <!-- Sub-grid de produtos para caes -->  
         <h5>Produtos Para Cães</h5>
         <hr>
       </div>
 
-      <div id="produtos-caes-grid" class="row">
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/2">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Bebedouro Prático Automático Cães e Gatos Azul Alvorada</h5>
-            <p class="card-text">a partir de: R$ 21,99</p>
-          </div>
+      <div id="produtos-caes-grid">   
+        
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/2">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-azul-alvorada.jpg" alt="Imagem Produto">
+          </a>
         </div>
-
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/5">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Brinquedo Cenoura Nylon Buddy Toys</h5>
-            <p class="card-text">a partir de: R$ 37,90</p>
-          </div>
+        <div class="card-block">
+          <h5 class="card-text">Bebedouro Prático Automático Cães e Gatos Azul Alvorada</h5>
+          <p class="card-text">a partir de: R$ 21,99</p>
         </div>
-
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/17">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Cama Suiça Bege Bichinho Chic</h5>
-            <p class="card-text">a partir de: R$ 51,90</p>
-          </div>
-        </div>
-
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/4">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/casa-mega-fácil-azul-alvorada.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Casa Mega Fácil Azul Alvorada</h5>
-            <p class="card-text">a partir de: R$ 89,90</p>
-          </div>
-        </div>
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/9">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Coleira Antipulgas Leevre 25,5g 48cm Ourofino</h5>
-            <p class="card-text">a partir de: R$ 105,90</p>
-          </div>
-        </div>
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
-          <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/11">
-              <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.jpg" alt="Imagem Produto">
-            </a>
-          </div>
-          <div class="card-block">
-            <h5 class="card-text">Ração Premier Nutrição Clínica Cães Cardio - 2kg</h5>
-            <p class="card-text">a partir de: R$ 62,90</p>
-          </div>
-        </div>
-
       </div>
 
 
-      <div id="produtos-gatos-titulo-grid">
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/5">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-cenoura-nylon-buddy-toys.jpg" alt="Imagem Produto">
+          </a>
+        </div>
+        <div class="card-block">
+          <h5 class="card-text">Brinquedo Cenoura Nylon Buddy Toys</h5>
+          <p class="card-text">a partir de: R$ 37,90</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/17">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cama-suiça-bege-bichinho-chic.jpg" alt="Imagem Produto">
+          </a>
+        </div>
+        <div class="card-block">
+          <h5 class="card-text">Cama Suiça Bege Bichinho Chic</h5>
+          <p class="card-text">a partir de: R$ 51,90</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/4">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/casa-mega-fácil-azul-alvorada.jpg" alt="Imagem Produto">
+          </a>
+        </div>
+        <div class="card-block">
+          <h5 class="card-text">Casa Mega Fácil Azul Alvorada</h5>
+          <p class="card-text">a partir de: R$ 89,90</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/9">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/coleira-antipulgas-leevre-25,5g-48cm-ourofino.jpg" alt="Imagem Produto">
+          </a>
+        </div>
+        <div class="card-block">
+          <h5 class="card-text">Coleira Antipulgas Leevre 25,5g 48cm Ourofino</h5>
+          <p class="card-text">a partir de: R$ 105,90</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <a href="<?=base_url()?>index.php/produto/visualizar/11">
+            <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/ração-premier-nutrição-clínica-cães-cardio-2kg.jpg" alt="Imagem Produto">
+          </a>
+        </div>
+        <div class="card-block">
+          <h5 class="card-text">Ração Premier Nutrição Clínica Cães Cardio - 2kg</h5>
+          <p class="card-text">a partir de: R$ 62,90</p>
+        </div>
+      </div>
+      
+      
+      </div>
+      
+      <div id="produtos-gatos-titulo-grid">   <!-- Sub-grid de produtos para gatos -->
         <h5>Produtos Para Gatos</h5>
         <hr>
       </div>
 
-      <div id="produtos-gatos-grid" class="row">      
+      <div id="produtos-gatos-grid">      
 
-
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/15">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -254,10 +256,9 @@
           </div>
         </div>
 
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/16">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/16">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/brinquedo-para-gatos-com-catnip-jambo.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -267,9 +268,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/1">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/1">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-whiskas-gatos-castrados-carne.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -279,9 +280,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/6">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/6">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/racao-hills-felino-senior-11-age-defying-3kg.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -291,9 +292,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/2">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/2">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/bebedouro-prático-automático-cães-e-gatos-vermelho-alvorada.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -303,9 +304,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/18">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/18">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/rasqueadeira-pratica-vermelha-chalesco.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -313,22 +314,20 @@
             <h5 class="card-text">Rasqueadeira Prática Vermelha Chalesco</h5>
             <p class="card-text">a partir de: R$ 11,50</p>
           </div>
-        </div>
-
+        </div>  
 
       </div>
 
-      <div id="produtos-medicamentos-titulo-grid">
+      <div id="produtos-medicamentos-titulo-grid">   <!-- Sub-grid de medicamentos -->
         <h5>Medicamentos</h5>
         <hr>
       </div>
     
+      <div id="produtos-medicamentos-grid">      
 
-      <div id="produtos-medicamentos-grid" class="row">      
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/15">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/15">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/cat-nip-120-ml-petmais.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -338,10 +337,9 @@
           </div>
         </div>
 
-
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/19">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/19">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/xixi-aqui-pet-clean-30ml.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -351,9 +349,9 @@
           </div>
         </div>
 
-         <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/8">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/8">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/neodexa-spray-74g-coveli.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -362,11 +360,10 @@
             <p class="card-text">a partir de: R$ 55,90</p>
           </div>
         </div>
-        
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/20">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/20">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/butox-20-ml-pulverização-intervet.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -376,9 +373,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/7">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/7">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/shampoo-cortishamp-125ml-agener.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -388,9 +385,9 @@
           </div>
         </div>
 
-        <div class="card col-xl-2 col-lg-2 col-md-4 col-sm-4 col-xs-6 col-6">
+        <div class="card">
           <div>
-            <a href="<?=base_url()?>index.php/produto/visualizar/10">
+            <a href="<?=base_url()?>/index.php/produto/visualizar/10">
               <img class="card-img-top" src="<?=base_url()?>/assets/imagens/produtos/gerioox-labyes.jpg" alt="Imagem Produto">
             </a>
           </div>
@@ -402,9 +399,8 @@
 
       </div>
 
-
     </main>
-
+    
     <footer id="page-footer-grid" class="d-inline-flex">
       <!--<img src="../../../assets/imagens/logoVermelho3.png" width="2.5%">-->
       <div class="mr-auto p-2">
@@ -423,6 +419,6 @@
       </div>
     </footer>
 
-  </div>
+  </div>  
 </body>
 </html>
