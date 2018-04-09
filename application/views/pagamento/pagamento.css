@@ -1,0 +1,74 @@
+#wrapper {
+    display: grid;
+    grid-template-areas:    "header"
+                            "confirmacao-compra"
+                            "pagamento"
+                            "footer";
+    grid-row-gap: 20px;
+}
+
+#grid_header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:    "header-logo header-navbar header-icons";
+}
+
+    #grid_header-logo {
+        grid-area: header-logo; 
+    }
+
+    #grid_header-navbar {
+        grid-area: header-navbar;
+    }
+
+    #grid_header-icons {
+        grid-area: header-icons;   
+    }
+
+#grid_confirmacao-compra {
+    grid-area: confirmacao-compra;
+    display: grid;
+    grid-template-areas:    "confirmacao-valores confirmacao-entrega" 
+                            "revisao-produtos revisao-produtos";
+}
+
+    #grid_confirmacao-valores {
+        grid-area: confirmacao-valores;
+    }
+
+    #grid_confirmacao-entrega {
+        grid-area: confirmacao-entrega;
+    }
+
+    #grid_revisao-produtos {
+        grid-area: revisao-produtos;
+    }
+
+#grid_pagamento {
+    grid-area: pagamento;
+    display: grid;
+    grid-template-areas:    "forma-pagamento"
+                            "dados-pagamento";
+}
+
+    #grid_forma-pagamento {
+        grid-area: forma-pagamento;
+    }
+
+    #grid_dados-pagamento {
+        grid-area: dados-pagamento;
+    }
+
+#grid_footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:    "footer-logo footer-social-media";
+}
+
+    #grid_footer-logo {
+        grid-area: footer-logo;
+    }
+
+    #grid_footer-social-media {
+        grid-area: footer-social-media;
+    }
