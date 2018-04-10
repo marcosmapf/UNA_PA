@@ -1,16 +1,70 @@
+:root {
+    --cor-principal: salmon;
+    --cor-borda: #999999;
+    --cor-sombra: rgba(0,0,0,0.2);
+    --font-size: 1.2rem;
+    --font-family: Arial,Helvetica,Verdana,sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 var(--cor-sombra);
+    transition: 0.3s;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    height: 120px;
+}
+
+.card > img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#grid_valor-entrega > p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#grid_info-entrega {
+    padding: 20px;
+}
+
+#grid_info-entrega > p {
+    margin-bottom: 0px;
+}
+
+.conteudo > input[type="radio"] {
+    position: absolute;
+    bottom: 5px;
+    left: 45%;
+}
+
+#alterar-endereco {
+    padding-top: 20px;
+    color: rgba(70,130,180, 1);
+}
+
+/*Grid Layout*/
+
 #wrapper {
     display: grid;
     grid-template-areas:    "header"
                             "confirmacao-compra"
                             "pagamento"
                             "footer";
-    grid-row-gap: 20px;
+    grid-gap: 20px;
+    padding: 0 40px 0 40px;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
 }
 
 #grid_header {
     grid-area: header;
     display: grid;
     grid-template-areas:    "header-logo header-navbar header-icons";
+    justify-content: space-between;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 8px 0 var(--cor-sombra);
+    transition: 0.3s;
 }
 
     #grid_header-logo {
@@ -28,41 +82,81 @@
 #grid_confirmacao-compra {
     grid-area: confirmacao-compra;
     display: grid;
-    grid-template-areas:    "confirmacao-valores confirmacao-entrega" 
+    grid-template-areas:    "metodo-entrega info-entrega" 
                             "revisao-produtos revisao-produtos";
+    grid-gap: 20px;
 }
 
-    #grid_confirmacao-valores {
-        grid-area: confirmacao-valores;
+    #grid_metodo-entrega {
+        grid-area: metodo-entrega;
+        display: grid;
+        grid-template-areas:    "opcoes-entrega"
+                                "valor-entrega";                                      
+        grid-gap: 20px;
+        padding-top: 20px;
+        border: 1px solid var(--cor-borda);
+        box-shadow: 0 4px 8px 0 var(--cor-sombra);
+        transition: 0.3s;
     }
 
-    #grid_confirmacao-entrega {
-        grid-area: confirmacao-entrega;
+        #grid_opcoes-entrega {
+            grid-area: opcoes-entrega;
+            display: grid;
+            justify-content: center;  
+            grid-template-columns: repeat(auto-fit, 300px);
+            grid-gap: 20px;
+        }
+        
+        #grid_valor-entrega {
+            grid-area: valor-entrega;
+            display: grid;
+            justify-content: right;
+        }
+
+    #grid_info-entrega {
+        grid-area: info-entrega;
+        border: 1px solid var(--cor-borda);
+        box-shadow: 0 4px 8px 0 var(--cor-sombra);
+        transition: 0.3s;
     }
 
     #grid_revisao-produtos {
         grid-area: revisao-produtos;
+        border: 1px solid var(--cor-borda);
+        box-shadow: 0 4px 8px 0 var(--cor-sombra);
+        transition: 0.3s;
     }
 
 #grid_pagamento {
     grid-area: pagamento;
     display: grid;
-    grid-template-areas:    "forma-pagamento"
+    grid-template-areas:    "metodo-pagamento"
                             "dados-pagamento";
+    grid-gap: 20px;    
 }
 
-    #grid_forma-pagamento {
-        grid-area: forma-pagamento;
+    #grid_metodo-pagamento {
+        grid-area: metodo-pagamento;
+        border: 1px solid var(--cor-borda);
+        box-shadow: 0 4px 8px 0 var(--cor-sombra);
+        transition: 0.3s;
     }
 
     #grid_dados-pagamento {
         grid-area: dados-pagamento;
+        border: 1px solid var(--cor-borda);
+        box-shadow: 0 4px 8px 0 var(--cor-sombra);
+        transition: 0.3s;
     }
 
 #grid_footer {
     grid-area: footer;
     display: grid;
-    grid-template-areas:    "footer-logo footer-social-media";
+    grid-template-areas:    "espaco footer-logo footer-social-media";
+    justify-content: space-between;
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 8px 0 var(--cor-sombra);
+    transition: 0.3s;
 }
 
     #grid_footer-logo {
