@@ -3,7 +3,16 @@
     --cor-borda: #999999;
     --cor-sombra: rgba(0,0,0,0.2);
     --font-size: 1.2rem;
+    --font-size-small: 1rem;
     --font-family: Arial,Helvetica,Verdana,sans-serif;
+}
+
+p, legend {
+    margin-bottom: 0px;
+}
+
+label, legend {
+    font-size: var(--font-size-small);
 }
 
 .card {
@@ -19,17 +28,14 @@
     margin-bottom: 20px;
 }
 
-#grid_valor-entrega > p {
-    padding-left: 20px;
-    padding-right: 20px;
+.pagamento-cartao-svg {
+    filter: grayscale(100%);
+    opacity: 0.8;
 }
 
-#grid_info-entrega {
-    padding: 20px;
-}
-
-#grid_info-entrega > p {
-    margin-bottom: 0px;
+.pagamento-cartao-svg.active {
+    filter: none;
+    opacity: 1;
 }
 
 .conteudo > input[type="radio"] {
@@ -38,9 +44,28 @@
     left: 45%;
 }
 
+#lista-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30px);
+    grid-column-gap: 2px;    
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
 #alterar-endereco {
     padding-top: 20px;
     color: rgba(70,130,180, 1);
+}
+
+#grid_valor-entrega > p {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+#grid_info-entrega {
+    padding: 20px;
 }
 
 /*Grid Layout*/
@@ -52,7 +77,7 @@
                             "pagamento"
                             "footer";
     grid-gap: 20px;
-    padding: 0 40px 0 40px;
+    justify-content: center;
     font-family: var(--font-family);
     font-size: var(--font-size);
 }
@@ -144,10 +169,83 @@
 
     #grid_dados-pagamento {
         grid-area: dados-pagamento;
+        display: grid;
+        justify-content: center;
+        grid-template-areas:    "pagamento-boleto"
+                                "pagamento-cartao";                                
         border: 1px solid var(--cor-borda);
         box-shadow: 0 4px 8px 0 var(--cor-sombra);
         transition: 0.3s;
+        padding: 20px;
     }
+
+        #grid_pagamento-boleto{
+
+        }
+
+        #grid_pagamento-cartao {
+            grid-area: dados-pagamento;
+            display: grid;
+            grid-template-areas:    "pagamento-cartao-numero"
+                                    "pagamento-cartao-lista"                                
+                                    "pagamento-cartao-validade"
+                                    "pagamento-cartao-seguranca"
+                                    "pagamento-cartao-parcelas"
+                                    "pagamento-cartao-pagar";
+            grid-row-gap: 10px;
+        }
+
+            #grid_pagamento-cartao-numero {
+                grid-area: pagamento-cartao-numero;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+
+            #grid_pagamento-cartao-lista {
+                grid-area: pagamento-cartao-lista;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+
+            #grid_pagamento-cartao-validade {
+                grid-area: pagamento-cartao-validade;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+
+            #grid_pagamento-cartao-validade input {
+                width: 80px;
+            }
+
+            #grid_pagamento-cartao-seguranca {
+                grid-area: pagamento-cartao-seguranca;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+
+            #grid_pagamento-cartao-seguranca input {
+                width: 80px;
+            }
+
+            #grid_pagamento-cartao-parcelas {
+                grid-area: pagamento-cartao-parcelas;
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                grid-column-gap: 10px;
+            }
+
+            #grid_pagamento-cartao-parcelas input {
+                width: 80px;
+            }
+            
+            #grid_pagamento-cartao-pagar {
+                grid-area: pagamento-cartao-pagar;
+                grid-column-gap: 10px;
+            }
 
 #grid_footer {
     grid-area: footer;
