@@ -68,6 +68,22 @@ label, legend {
     padding: 20px;
 }
 
+#grid_pagamento-boleto svg {
+    width: 8%;
+}
+        
+#grid_pagamento-boleto > div {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-size: var(--font-size-small);
+    padding: 3px;
+}
+
+#grid_pagamento-boleto > div > span {
+    padding: 10px;
+}
+
 /*Grid Layout*/
 
 #wrapper {
@@ -86,7 +102,7 @@ label, legend {
     grid-area: header;
     display: grid;
     grid-template-areas:    "header-logo header-navbar header-icons";
-    justify-content: space-between;
+   justify-content: space-between;
     border: 1px solid var(--cor-borda);
     box-shadow: 0 4px 8px 0 var(--cor-sombra);
     transition: 0.3s;
@@ -172,26 +188,27 @@ label, legend {
         display: grid;
         justify-content: center;
         grid-template-areas:    "pagamento-boleto"
-                                "pagamento-cartao";                                
+                                "pagamento-cartao"
+                                "pagamento-pagar";                              
         border: 1px solid var(--cor-borda);
         box-shadow: 0 4px 8px 0 var(--cor-sombra);
         transition: 0.3s;
         padding: 20px;
     }
 
-        #grid_pagamento-boleto{
-
+        #grid_pagamento-boleto {
+            grid-area: pagamento-boleto;
+            display: none;
         }
 
         #grid_pagamento-cartao {
-            grid-area: dados-pagamento;
+            grid-area: pagamento-cartao;
             display: grid;
             grid-template-areas:    "pagamento-cartao-numero"
                                     "pagamento-cartao-lista"                                
                                     "pagamento-cartao-validade"
                                     "pagamento-cartao-seguranca"
-                                    "pagamento-cartao-parcelas"
-                                    "pagamento-cartao-pagar";
+                                    "pagamento-cartao-parcelas";
             grid-row-gap: 10px;
         }
 
@@ -242,10 +259,11 @@ label, legend {
                 width: 80px;
             }
             
-            #grid_pagamento-cartao-pagar {
-                grid-area: pagamento-cartao-pagar;
-                grid-column-gap: 10px;
-            }
+        #grid_pagamento-pagar {
+            grid-area: pagamento-pagar;
+            grid-column-gap: 10px;
+            padding-top: 20px;
+        }
 
 #grid_footer {
     grid-area: footer;
