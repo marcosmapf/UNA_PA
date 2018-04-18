@@ -113,22 +113,22 @@
                     <div id="grid_pagamento-cartao-validade">
                         <legend for="cartao-validade">Validade</legend>
                         <div id="cartao-validade">
-                            <input id="cartao-validade-mes" type="text"> <!-- Adicionar datas válidas com angular ou php-->
-                            <input id="cartao-validade-ano" type="text"> <!-- Adicionar opcoes válidas com angular ou php-->
+                            <input class="small" type="text"> <!-- Adicionar datas válidas com angular ou php-->
+                            <input class="small" type="text"> <!-- Adicionar opcoes válidas com angular ou php-->
                         </div>
                     </div>
                     <div id="grid_pagamento-cartao-seguranca">
                         <label for="cartao-codigo-seguranca">Código de segurança</label>
-                        <input id="cartao-codigo-seguranca" type="text">
+                        <input class="small" type="text">
                     </div>
                     <div id="grid_pagamento-cartao-parcelas">
                         <label for="cartao-parcelas-">Número de parcelas</label>
-                        <input id="cartao-parcelas" type="text"> <!-- Adicionar pattern e mask com angular válidas com angular ou php-->
+                        <input class="small" type="text"> <!-- Adicionar pattern e mask com angular válidas com angular ou php-->
                     </div>
                 </div>
                 <div id="grid_pagamento-pagar">
                     <label for="pagamento-pagar-botao">Valor Total: R$ {{valor-total}}</label>
-                    <button id="pagamento-pagar-botao">Pagar com cartão de crédito</button>
+                    <button id="pagamento-pagar-botao">{{Gerar Boleto / Pagar com cartão de débito}}}</button>
                 </div>          
             </div>
         </section>
