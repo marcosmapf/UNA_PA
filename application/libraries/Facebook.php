@@ -1,280 +1,505 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
-/**
- * Facebook PHP SDK v5 for CodeIgniter 3.x
- *
- * Library for Facebook PHP SDK v5. It helps the user to login with their Facebook account
- * in CodeIgniter application.
- *
- * This library requires the Facebook PHP SDK v5 and it should be placed in libraries folder.
- *
- * It also requires facebook configuration file and it should be placed in the config directory.
- *
- * @package     CodeIgniter
- * @category    Libraries
- * @author      CodexWorld
- * @license     http://www.codexworld.com/license/
- * @link        http://www.codexworld.com
- * @version     2.0
- */
+<?php
 
-// Include the autoloader provided in the SDK
-require_once 'php-graph-sdk-5.x/src/Facebook/autoload.php'; 
+	class facebook {
+		
+		private $_api_url;
+		private $_api_key;
+		private $_api_secret;
+		private $_errors = array();
+		private $_enable_debug = FALSE;
+		
+		function __construct()
+		{
+			$this->_obj =& get_instance();
+			
+			$this->_obj->load->library('session');
+			$this->_obj->load->config('facebook');
+			$this->_obj->load->helper('url');
+			$this->_obj->load->helper('facebook');
+			
+			$this->_api_url 	= $this->_obj->config->item('facebook_api_url');
+			$this->_api_key 	= $this->_obj->config->item('facebook_app_id');
+			$this->_api_secret 	= $this->_obj->config->item('facebook_api_secret');
+			
+			$this->session = new facebookSession();
+			$this->connection = new facebookConnection();
+		}
+		
+		public function logged_in()
+		{
+			return $this->session->logged_in();
+		}
+		
+		public function login($scope = NULL)
+		{
+			return $this->session->login($scope);
+		}
+		
+		public function login_url($scope = NULL)
+		{
+			return $this->session->login_url($scope);
+		}
+		
+		public function logout()
+		{
+			return $this->session->logout();
+		}
+		
+		public function user()
+		{
+			return $this->session->get();
+		}
+		
+		public function call($method, $uri, $data = array())
+		{
+			$response = FALSE;
+			
+			try
+			{
+				switch ( $method )
+				{
+					case 'get':
+						$response = $this->connection->get($this->append_token($this->_api_url.$uri));
+					break;
+					
+					case 'post':
+						$response = $this->connection->post($this->append_token($this->_api_url.$uri), $data);
+					break;
+				}
+			}
+			catch (facebookException $e)
+			{
+				$this->_errors[] = $e;
+				
+				if ( $this->_enable_debug )
+				{
+					echo $e;
+				}
+			}
+			
+			return $response;
+		}
+		
+		public function errors()
+		{
+			return $this->_errors;
+		}
+		
+		public function last_error()
+		{
+			if ( count($this->_errors) == 0 ) return NULL;
+			
+			return $this->_errors[count($this->_errors) - 1];
+		}
+		
+		public function append_token($url)
+		{
+			return $this->session->append_token($url);
+		}
+		
+		public function set_callback($url)
+		{
+			return $this->session->set_callback($url);
+		}
+		
+		public function enable_debug($debug = TRUE)
+		{
+			$this->_enable_debug = (bool) $debug;
+			
+			
+		}
+	}
+	
+	class facebookConnection {
+		
+		// Allow multi-threading.
+		
+		private $_mch = NULL;
+		private $_properties = array();
+		
+		function __construct()
+		{
+			$this->_mch = curl_multi_init();
+			
+			$this->_properties = array(
+				'code' 		=> CURLINFO_HTTP_CODE,
+				'time' 		=> CURLINFO_TOTAL_TIME,
+				'length'	=> CURLINFO_CONTENT_LENGTH_DOWNLOAD,
+				'type' 		=> CURLINFO_CONTENT_TYPE
+			);
+		}
+		
+		private function _initConnection($url)
+		{
+			$this->_ch = curl_init($url);
+			curl_setopt($this->_ch, CURLOPT_RETURNTRANSFER, TRUE);
+		}
+		
+		public function get($url, $params = array())
+		{
+			if ( count($params) > 0 )
+			{
+				$url .= '?';
+			
+				foreach( $params as $k => $v )
+				{
+					$url .= "{$k}={$v}&";
+				}
+				
+				$url = substr($url, 0, -1);
+			}
+			
+			$this->_initConnection($url);
+			$response = $this->_addCurl($url, $params);
 
-use Facebook\Facebook as FB;
-use Facebook\Authentication\AccessToken;
-use Facebook\Exceptions\FacebookResponseException;
-use Facebook\Exceptions\FacebookSDKException;
-use Facebook\Helpers\FacebookJavaScriptHelper;
-use Facebook\Helpers\FacebookRedirectLoginHelper;
-Class Facebook
-{
-    /**
-     * @var FB
-     */
-    private $fb;
-    /**
-     * @var FacebookRedirectLoginHelper|FacebookJavaScriptHelper
-     */
-    private $helper;
+		    return $response;
+		}
+		
+		public function post($url, $params = array())
+		{
+			// Todo
+			$post = '';
+			
+			foreach ( $params as $k => $v )
+			{
+				$post .= "{$k}={$v}&";
+			}
+			
+			$post = substr($post, 0, -1);
+			
+			$this->_initConnection($url, $params);
+			curl_setopt($this->_ch, CURLOPT_POST, 1);
+			curl_setopt($this->_ch, CURLOPT_POSTFIELDS, $post);
+			
+			$response = $this->_addCurl($url, $params);
 
-    /**
-     * Facebook constructor.
-     */
-    public function __construct(){
-        // Load fb config
-        $this->load->config('facebook');
-        // Load required libraries and helpers
-        $this->load->library('session');
-        $this->load->helper('url');
-        if (!isset($this->fb)){
-            $this->fb = new FB([
-                'app_id'                => $this->config->item('facebook_app_id'),
-                'app_secret'            => $this->config->item('facebook_app_secret'),
-                'default_graph_version' => $this->config->item('facebook_graph_version')
-            ]);
-        }
-        // Load correct helper depending on login type
-        // set in the config file
-        switch ($this->config->item('facebook_login_type')){
-            case 'js':
-                $this->helper = $this->fb->getJavaScriptHelper();
-                break;
-            case 'canvas':
-                $this->helper = $this->fb->getCanvasHelper();
-                break;
-            case 'page_tab':
-                $this->helper = $this->fb->getPageTabHelper();
-                break;
-            case 'web':
-                $this->helper = $this->fb->getRedirectLoginHelper();
-                break;
-        }
-        if ($this->config->item('facebook_auth_on_load') === TRUE){
-            // Try and authenticate the user right away (get valid access token)
-            $this->authenticate();
-        }
-    }
-    
-    /**
-     * @return FB
-     */
-    public function object(){
-        return $this->fb;
-    }
-    
-    /**
-     * Check whether the user is logged in.
-     * by access token
-     *
-     * @return mixed|boolean
-     */
-    public function is_authenticated(){
-        $access_token = $this->authenticate();
-        if(isset($access_token)){
-            return $access_token;
-        }
-        return false;
-    }
-    
-    /**
-     * Do Graph request
-     *
-     * @param       $method
-     * @param       $endpoint
-     * @param array $params
-     * @param null  $access_token
-     *
-     * @return array
-     */
-    public function request($method, $endpoint, $params = [], $access_token = null){
-        try{
-            $response = $this->fb->{strtolower($method)}($endpoint, $params, $access_token);
-            return $response->getDecodedBody();
-        }catch(FacebookResponseException $e){
-            return $this->logError($e->getCode(), $e->getMessage());
-        }catch (FacebookSDKException $e){
-            return $this->logError($e->getCode(), $e->getMessage());
-        }
-    }
-    
-    /**
-     * Generate Facebook login url for web
-     *
-     * @return  string
-     */
-    public function login_url(){
-        // Login type must be web, else return empty string
-        if($this->config->item('facebook_login_type') != 'web'){
-            return '';
-        }
-        // Get login url
-        return $this->helper->getLoginUrl(
-            base_url() . $this->config->item('facebook_login_redirect_url'),
-            $this->config->item('facebook_permissions')
-        );
-    }
-    
-    /**
-     * Generate Facebook logout url for web
-     *
-     * @return string
-     */
-    public function logout_url(){
-        // Login type must be web, else return empty string
-        if($this->config->item('facebook_login_type') != 'web'){
-            return '';
-        }
-        // Get logout url
-        return $this->helper->getLogoutUrl(
-            $this->get_access_token(),
-            base_url() . $this->config->item('facebook_logout_redirect_url')
-        );
-    }
-    
-    /**
-     * Destroy local Facebook session
-     */
-    public function destroy_session(){
-        $this->session->unset_userdata('fb_access_token');
-    }
-    
-    /**
-     * Get a new access token from Facebook
-     *
-     * @return array|AccessToken|null|object|void
-     */
-    private function authenticate(){
-        $access_token = $this->get_access_token();
-        if($access_token && $this->get_expire_time() > (time() + 30) || $access_token && !$this->get_expire_time()){
-            $this->fb->setDefaultAccessToken($access_token);
-            return $access_token;
-        }
-        // If we did not have a stored access token or if it has expired, try get a new access token
-        if(!$access_token){
-            try{
-                $access_token = $this->helper->getAccessToken();
-            }catch (FacebookSDKException $e){
-                $this->logError($e->getCode(), $e->getMessage());
-                return null;
-            }
-            // If we got a session we need to exchange it for a long lived session.
-            if(isset($access_token)){
-                $access_token = $this->long_lived_token($access_token);
-                $this->set_expire_time($access_token->getExpiresAt());
-                $this->set_access_token($access_token);
-                $this->fb->setDefaultAccessToken($access_token);
-                return $access_token;
-            }
-        }
-        // Collect errors if any when using web redirect based login
-        if($this->config->item('facebook_login_type') === 'web'){
-            if($this->helper->getError()){
-                // Collect error data
-                $error = array(
-                    'error'             => $this->helper->getError(),
-                    'error_code'        => $this->helper->getErrorCode(),
-                    'error_reason'      => $this->helper->getErrorReason(),
-                    'error_description' => $this->helper->getErrorDescription()
-                );
-                return $error;
-            }
-        }
-        return $access_token;
-    }
-    
-    /**
-     * Exchange short lived token for a long lived token
-     *
-     * @param AccessToken $access_token
-     *
-     * @return AccessToken|null
-     */
-    private function long_lived_token(AccessToken $access_token){
-        if(!$access_token->isLongLived()){
-            $oauth2_client = $this->fb->getOAuth2Client();
-            try{
-                return $oauth2_client->getLongLivedAccessToken($access_token);
-            }catch (FacebookSDKException $e){
-                $this->logError($e->getCode(), $e->getMessage());
-                return null;
-            }
-        }
-        return $access_token;
-    }
-    
-    /**
-     * Get stored access token
-     *
-     * @return mixed
-     */
-    private function get_access_token(){
-        return $this->session->userdata('fb_access_token');
-    }
-    
-    /**
-     * Store access token
-     *
-     * @param AccessToken $access_token
-     */
-    private function set_access_token(AccessToken $access_token){
-        $this->session->set_userdata('fb_access_token', $access_token->getValue());
-    }
-    
-    /**
-     * @return mixed
-     */
-    private function get_expire_time(){
-        return $this->session->userdata('fb_expire');
-    }
-    
-    /**
-     * @param DateTime $time
-     */
-    private function set_expire_time(DateTime $time = null){
-        if ($time) {
-            $this->session->set_userdata('fb_expire', $time->getTimestamp());
-        }
-    }
-    
-    /**
-     * @param $code
-     * @param $message
-     *
-     * @return array
-     */
-    private function logError($code, $message){
-        log_message('error', '[FACEBOOK PHP SDK] code: ' . $code.' | message: '.$message);
-        return ['error' => $code, 'message' => $message];
-    }
-    
-    /**
-     * Enables the use of CI super-global without having to define an extra variable.
-     *
-     * @param $var
-     *
-     * @return mixed
-     */
-    public function __get($var){
-        return get_instance()->$var;
-    }
-}
+		    return $response;
+		}
+		
+		private function _addCurl($url, $params = array())
+		{
+			$ch = $this->_ch;
+			
+			$key = (string) $ch;
+			$this->_requests[$key] = $ch;
+			
+			$response = curl_multi_add_handle($this->_mch, $ch);
+
+			if ( $response === CURLM_OK || $response === CURLM_CALL_MULTI_PERFORM )
+			{
+				do {
+					$mch = curl_multi_exec($this->_mch, $active);
+				} while ( $mch === CURLM_CALL_MULTI_PERFORM );
+				
+				return $this->_getResponse($key);
+			}
+			else
+			{
+				return $response;
+			}
+		}
+		
+		private function _getResponse($key = NULL)
+		{
+			if ( $key == NULL ) return FALSE;
+			
+			if ( isset($this->_responses[$key]) )
+			{
+				return $this->_responses[$key];
+			}
+			
+			$running = NULL;
+			
+			do
+			{
+				$response = curl_multi_exec($this->_mch, $running_curl);
+				
+				if ( $running !== NULL && $running_curl != $running )
+				{
+					$this->_setResponse($key);
+					
+					if ( isset($this->_responses[$key]) )
+					{
+						$response = new facebookResponse( (object) $this->_responses[$key] );
+						
+						if ( $response->__resp->code !== 200 )
+						{
+							$error = $response->__resp->code.' | Request Failed';
+							
+							if ( isset($response->__resp->data->error->type) )
+							{
+								$error .= ' - '.$response->__resp->data->error->type.' - '.$response->__resp->data->error->message;
+							}
+							
+							throw new facebookException($error);
+						}
+						
+						return $response;
+					}
+				}
+				
+				$running = $running_curl;
+				
+			} while ( $running_curl > 0);
+			
+		}
+		
+		private function _setResponse($key)
+		{
+			while( $done = curl_multi_info_read($this->_mch) )
+			{
+				$key = (string) $done['handle'];
+				$this->_responses[$key]['data'] = curl_multi_getcontent($done['handle']);
+				
+				foreach ( $this->_properties as $curl_key => $value )
+				{
+					$this->_responses[$key][$curl_key] = curl_getinfo($done['handle'], $value);
+					
+					curl_multi_remove_handle($this->_mch, $done['handle']);
+				}
+		  }
+		}
+	}
+	
+	class facebookResponse {
+		
+		private $__construct;
+
+		public function __construct($resp)
+		{
+			$this->__resp = $resp;
+
+			$data = json_decode($this->__resp->data);
+			
+			if ( $data !== NULL )
+			{
+				$this->__resp->data = $data;
+			}
+		}
+
+		public function __get($name)
+		{
+			if ($this->__resp->code < 200 || $this->__resp->code > 299) return FALSE;
+
+			$result = array();
+
+			if ( is_string($this->__resp->data ) )
+			{
+				parse_str($this->__resp->data, $result);
+				$this->__resp->data = (object) $result;
+			}
+			
+			if ( $name === '_result')
+			{
+				return $this->__resp->data;
+			}
+			
+			return $this->__resp->data->$name;
+		}
+	}
+	
+	class facebookException extends Exception {
+		
+		function __construct($string)
+		{
+			parent::__construct($string);
+		}
+		
+		public function __toString() {
+			return "exception '".__CLASS__ ."' with message '".$this->getMessage()."' in ".$this->getFile().":".$this->getLine()."\nStack trace:\n".$this->getTraceAsString();
+		}
+	}
+	
+	class facebookSession {
+		
+		private $_api_key;
+		private $_api_secret;
+		private $_token_url 	= 'oauth/access_token';
+		private $_user_url		= 'me';
+		private $_data			= array();
+		
+		function __construct()
+		{
+			$this->_obj =& get_instance();
+			
+			$this->_api_key 	= $this->_obj->config->item('facebook_app_id');
+			$this->_api_secret 	= $this->_obj->config->item('facebook_api_secret');
+			
+			$this->_token_url 	= $this->_obj->config->item('facebook_api_url').$this->_token_url;
+			$this->_user_url 	= $this->_obj->config->item('facebook_api_url').$this->_user_url;
+			
+			$this->_set('scope', $this->_obj->config->item('facebook_default_scope'));
+			
+			$this->connection = new facebookConnection();
+			
+			if ( !$this->logged_in() )
+			{
+				 // Initializes the callback to this page URL.
+				$this->set_callback();
+			}
+			
+		}
+		
+		public function logged_in()
+		{
+			return ( $this->get() === NULL ) ? FALSE : TRUE;
+		}
+		
+		public function logout()
+		{
+			$this->_unset('token');
+			$this->_unset('user');
+		}
+		
+		public function login_url($scope = NULL)
+		{
+			$url = "http://www.facebook.com/dialog/oauth?client_id=".$this->_api_key.'&redirect_uri='.urlencode($this->_get('callback'));
+			
+			if ( empty($scope) )
+			{
+				$scope = $this->_get('scope');
+			}
+			else
+			{
+				$this->_set('scope', $scope);
+			}
+			
+			if ( !empty($scope) )
+			{
+				$url .= '&scope='.$scope;
+			}
+			
+			return $url;
+		}
+		
+		public function login($scope = NULL)
+		{
+			$this->logout();
+			
+			if ( !$this->_get('callback') ) $this->_set('callback', current_url());
+			
+			$url = $this->login_url($scope);
+				
+			return redirect($url);
+		}
+		
+		public function get()
+		{
+			$token = $this->_find_token();
+			if ( empty($token) ) return NULL;
+			
+			// $user = $this->_get('user');
+			// if ( !empty($user) ) return $user;
+			
+			try 
+			{
+				$user = $this->connection->get($this->_user_url.'?'.$this->_token_string());
+			}
+			catch ( facebookException $e )
+			{
+				$this->logout();
+				return NULL;
+			}
+			
+			// $this->_set('user', $user);
+			return $user;
+		}
+		
+		private function _find_token()
+		{
+			$token = $this->_get('token');
+			
+			if ( !empty($token) )
+			{
+				if ( !empty($token->expires) && intval($token->expires) >= time() )
+				{
+					// Problem, token is expired!
+					return $this->logout();
+				}
+				
+				$this->_set('token', $token);
+				return $this->_token_string();
+			}
+			
+			if ( !isset($_GET['code']) )
+			{
+				return $this->logout();
+			}
+			
+			if ( !$this->_get('callback') ) $this->_set('callback', current_url());
+			$token_url = $this->_token_url.'?client_id='.$this->_api_key."&client_secret=".$this->_api_secret."&code=".$_GET['code'].'&redirect_uri='.urlencode($this->_get('callback'));
+			
+			try 
+			{
+				$token = $this->connection->get($token_url);
+			}
+			catch ( facebookException $e )
+			{
+				$this->logout();
+				redirect($this->_strip_query());
+				return NULL;
+			}
+			
+			$this->_unset('callback');
+			
+			if ( $token->access_token )
+			{
+				if ( !empty($token->expires) )
+				{
+					$token->expires = strval(time() + intval($token->expires));
+				}
+				
+				$this->_set('token', $token);
+				redirect($this->_strip_query());
+			}
+			
+			return $this->_token_string();
+		}
+		
+		private function _get($key)
+		{
+			$key = '_facebook_'.$key;
+			return $this->_obj->session->userdata($key);
+		}
+		
+		private function _set($key, $data)
+		{
+			$key = '_facebook_'.$key;
+			$this->_obj->session->set_userdata($key, $data);
+		}
+		
+		private function _unset($key)
+		{
+			$key = '_facebook_'.$key;
+			$this->_obj->session->unset_userdata($key);
+		}
+		
+		public function set_callback($url = NULL)
+		{
+			$this->_set('callback', $this->_strip_query($url));
+		}
+		
+		private function _token_string()
+		{
+			return 'access_token='.$this->_get('token')->access_token;
+		}
+		
+		public function append_token($url)
+		{
+			if ( $this->_get('token') ) $url .= '?'.$this->_token_string();
+			
+			return $url;
+		}
+		
+		private function _strip_query($url = NULL)
+		{
+			if ( $url === NULL )
+			{
+				$url = ( empty($_SERVER['HTTPS']) ) ? 'http' : 'https';
+				$url .= '://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			}
+			
+			$parts = explode('?', $url);
+			return $parts[0];
+		}
+	}

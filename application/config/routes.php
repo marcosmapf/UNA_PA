@@ -53,3 +53,25 @@ $route['default_controller'] = 'main/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['auxi/icmsporestado/inclusao']['GET'] = 'auxi/icmsporestado_controller/inclusao';
+
+
+$route['user_authentication/index']['GET'] = 'login/login';
+//$route['user_authentication/index']['GET'] = 'user_authentication/index';
+$route['entrar']['POST'] = 'login/login_entrar';
+$route['logout']['GET'] = 'login/logout';
+
+$route['main/contato']['GET'] = 'main/contato';
+$route['main/about']['GET'] = 'main/about';
+
+
+$route['carrinho']['GET'] = 'carrinho/consultar';
+$route['produto/adicionarCarrinho/(:any)']['GET'] = 'produto/adicionarCarrinho/$1';
+$route['carrinho/retirar/(:any)']['GET'] = 'carrinho/retirarCarrinho/$1';
+
+
+
+$route['calcular_frete']['POST'] = 'carrinho/calcular_frete';
+
+$route['cadastro/endereco']['GET'] = 'cadastro/endereco';
+$route['cadastro/endereco_salvar']['POST'] = 'cadastro/endereco_salvar';
+$route['cidade_estado_ajax']['POST'] = 'cadastro/cidadeestado_ajax';

@@ -14,8 +14,8 @@
 		<main class="cadastro-pane col-md-12 col-sm-12 col-xs-12">
 			<form name="cadastroForm" ng-submit="teste()" method="post" ng-controller="cadastroController">				
 				<figure class="brand form-group">
-					<a href="<?=base_url();?>index.php/main/index">
-						<img src="../../../assets/imagens/logoVermelho2.png" width="25%">
+					<a href="<?=base_url()?>main/index">
+						<img src="<?=base_url()?>assets/imagens/logoVermelho2.png" width="25%">
 					</a>
 				</figure>
 				<div class="row">

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../../assets/css/produto.css">
+  <link rel="stylesheet" href="<?=base_url()?>assets/css/produto.css">
   <title>Visualizar produto</title>  
 </head>
 <body ng-app="appModule" ng-cloak>
@@ -90,10 +90,10 @@
                     <option ng-repeat="option in quantidadeProdutos" ng-value="option.value">{{option.name}}</option>
                   </select></br></br>
                   -->
-                  <a href="<?=base_url()?>index.php/produto/adicionarCarrinho/<?= $produto->codigoProduto;?>" class="btn btn-danger" width="200%">Adicionar ao carrinho</a><br><br>
+                  <a href="<?=base_url()?>produto/adicionarCarrinho/<?= $produto->codigoProduto?>" class="btn btn-danger" width="200%">Adicionar ao carrinho</a><br><br>
                   <div class="info-pagamento text-left">
-                    <img src="../../../assets/imagens/codigo-barras.png" width="8%"> R$ <?= ($produto->preco*0.9);?> no boleto bancário (10% de desconto)
-                    <p><img src="../../../assets/imagens/cartao-credito.png"  width="8%"> R$ <?= $produto->preco;?> em até 5x de R$<?= ($produto->preco/5)?> sem juros</p>
+                    <img src="<?=base_url()?>assets/imagens/codigo-barras.png" width="8%"> R$ <?= ($produto->preco*0.9);?> no boleto bancário (10% de desconto)
+                    <p><img src="<?=base_url()?>assets/imagens/cartao-credito.png"  width="8%"> R$ <?= $produto->preco;?> em até 5x de R$<?= ($produto->preco/5)?> sem juros</p>
                   </div>
                 </div>              
                 <div>
@@ -125,7 +125,7 @@
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-<script src="../../../assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+<script src="<?=base_url()?>assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-<script type="text/javascript" src="../../../assets/js/produto.js"></script> <!--Local Javascript Import-->
+<script type="text/javascript" src="<?=base_url()?>assets/js/produto.js"></script> <!--Local Javascript Import-->
 </html>

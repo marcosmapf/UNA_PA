@@ -5,7 +5,7 @@ class User_Authentication extends CI_Controller
         parent::__construct();
 
         // Load facebook library
-        $this->load->library('facebook');
+        $this->load->library('Facebook2');
 
         //Load user model
         $this->load->model('user');
