@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Sobre nós</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
 	<link rel="stylesheet" href="<?=base_url()?>/assets/css/about.css"> <!--Local Stylesheet Import-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--Material Icons Font-->
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-</head>
 <body ng-app="appModule" ng-cloak>
 
-	<div class="container">
+	<div class="container" style="padding-top: 5%">
 
 		<div class="row descricao-projeto">
 			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12">
@@ -124,6 +116,7 @@
 		</main>
 	</div>
 </body>
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
 <script src="<?=base_url()?>/assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
@@ -134,7 +127,7 @@
 <script src="<?=base_url()?>/assets/node_modules/angular-ui-mask/dist/mask.js"></script>
 <script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
 <script type="text/javascript" src="<?=base_url()?>/assets/js/cadastro.js"></script> <!--Local Javascript Import-->
-</html>
+
 
 <!-- 
 Tutoriais Angular Messages 	

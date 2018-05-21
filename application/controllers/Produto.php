@@ -30,7 +30,7 @@ class Produto extends CI_Controller
         $data["produtos"] = $lista_produtos;
         $data["valorTotal"] = $this->carrinho->getValorTotalCarrinho($produtos);
 
-        $this->load->view("carrinho/carrinho", $data);
+       redirect("carrinho", $data);
 
     }
 

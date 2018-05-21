@@ -25,4 +25,13 @@ class User extends CI_Model{
 
         return $userID?$userID:FALSE;
     }
+
+    public function existeUser($email, $senha){
+        $this->db->select('*');
+        $this->db->from('cliente');
+        $this->db->where('email', $email);
+        $this->db->where('senha', $senha);
+
+        return $this->db->get()->result();
+    }
 }

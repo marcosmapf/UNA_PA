@@ -3,20 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Main extends CI_Controller {
 
-	
-	public function index()
-	{
-		$this->load->view('main/main');
+	public function __construct(){
+		parent::__construct();
+		$this->load->helper('template_helper');
+		$this->load->helper('sessao_helper');
+		verificaSessao();
 	}
 
-	public function contato()
-	{
+	
+	public function index(){
+		render_template('main/main');
+	}
+
+	public function contato(){
 		$this->load->view('contato/contato');
 	}
 
-	public function about()
-	{
-		$this->load->view('about/about');
+	public function about(){
+		render_template('about/about');
 	}
 
 }
