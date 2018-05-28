@@ -30,33 +30,37 @@ class Login extends CI_Controller {
 	}
 
 	public function login_entrar(){
+    $this->load->model('Endereco_model', 'endereco');
 		$email = $this->input->post('enderecoEmail');
-      	$senha = $this->input->post('senhaUsuario');
+    $senha = $this->input->post('senhaUsuario');
 
 
-      	$this->load->model('User', 'user');
-      	$existecontato = $this->user->existeUser($email, $senha);
+    $this->load->model('User', 'user');
+    $existecontato = $this->user->existeUser($email, $senha);
 
 
-       // $dados = 0 =>  login não existe
-      if($existecontato){
+     // $dados = 0 =>  login não existe
+    if($existecontato){
 
-          $usuario = [
-            'id' => $existecontato[0]->codigoCliente,
-            'cpf' => $existecontato[0]->cpf,
-            'nome' => $existecontato[0]->nome,
-            'email' => $existecontato[0]->email
-          ];
+        $usuario = [
+          'id' => $existecontato[0]->codigoCliente,
+          'cpf' => $existecontato[0]->cpf,
+          'nome' => $existecontato[0]->nome,
+          'email' => $existecontato[0]->email
+        ];
+
+        $endereco = $this->endereco->buscaEnderecoCliente($existecontato[0]->codigoCliente);
 
 
-          //$this->apagar_token($dados[0]->usu_login);
-          $this->session->set_userdata('logado', $usuario);
+        //$this->apagar_token($dados[0]->usu_login);
+        $this->session->set_userdata('logado', $usuario);
+        $this->session->set_userdata('endereco', $endereco[0]);
 
-          redirect('main/index');
-        
-      }else{
-        $this->session->set_flashdata('msg', 'Login/Senha inválido.');
-        redirect('user_authentication/index');
+        redirect('main/index');
+      
+    }else{
+      $this->session->set_flashdata('msg', 'Login/Senha inválido.');
+      redirect('user_authentication/index');
         
 	}
 

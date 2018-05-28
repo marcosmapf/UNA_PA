@@ -7,7 +7,7 @@ class Main extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('template_helper');
 		$this->load->helper('sessao_helper');
-		verificaSessao();
+		
 	}
 
 	

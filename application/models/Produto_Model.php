@@ -11,5 +11,12 @@ class Produto_Model extends CI_Model {
             return $this->db->get()->row();
         }
 
+        public function consultaPreco($idProduto){
+        	$this->db->select('preco');
+            $this->db->where('codigoProduto', $idProduto);
+            $this->db->from('produto');
+            return $this->db->get()->row('preco');
+        }
+
     
    }

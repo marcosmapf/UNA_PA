@@ -139,7 +139,8 @@
 					<input type="hidden" id="subtotalhidden" value="<?=$valorTotal->preco?>">
 					<h2 id="subTotal">Subtotal: <span id="subtotalSpan" style="color: orangered">R$ <?=$valorTotal->preco;?> à vista</h2>
 					<p id="parcelas">ou em até 5x de R$ <?=($valorTotal->preco/5);?> sem juros </p>
-					<button class="btn btn-danger">Continuar</button><br><br>
+					<?php $id_unico = strtotime(date('d-m-Y H:i:s')); ?>
+					<a href="<?=base_url()?>finalizar_compra/<?=$id_unico?>" class="btn btn-danger btn-lg">Continuar</a><br><br>
 				</div>
 			</div>
 		</section>

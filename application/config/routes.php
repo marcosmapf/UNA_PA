@@ -67,6 +67,9 @@ $route['main/about']['GET'] = 'main/about';
 $route['carrinho']['GET'] = 'carrinho/consultar';
 $route['produto/adicionarCarrinho/(:any)']['GET'] = 'produto/adicionarCarrinho/$1';
 $route['carrinho/retirar/(:any)']['GET'] = 'carrinho/retirarCarrinho/$1';
+$route['finalizar_compra/(:any)']['GET'] = 'carrinho/finalizar_compra/$1';
+$route['pedido_finalizado/(:any)/(:any)/(:any)']['GET'] = 'carrinho/pedido_finalizado/$1/$2/$3';
+$route['acompanhar_pedidos']['GET'] = 'carrinho/acompanhar_pedidos';
 
 
 
