@@ -22,9 +22,7 @@
 	</script>
 
 <body>
-	<div class="wrapper">
-
-		
+	<main>	
 
 		<div id="produtos-grid" class="container">
 
@@ -147,7 +145,7 @@
 		<?php } ?>
 
 
-	</div>
+	</main>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->

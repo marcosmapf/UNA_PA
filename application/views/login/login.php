@@ -53,7 +53,7 @@
 					</div>
 					<hr>
 					<div class="social-block-title">
-						<p>Login com<br />Rede Social</p>
+						<p>Login com Rede Social</p>
 					</div>
 					<div class="my-account social-block">
 						<?php if ( !$this->facebook->logged_in() ): ?>
