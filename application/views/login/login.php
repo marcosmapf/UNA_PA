@@ -91,14 +91,3 @@
 		<script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
 		<script type="text/javascript" src="<?=base_url()?>assets/js/login.js"></script> <!--Local Javascript Import-->
 	</html>
-
-
-	<!-- 
-	Tutoriais Angular Messages 	
-	https://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html 
-	https://docs.angularjs.org/api/ngMessages/directive/ngMessages
-	-->
-
-
-	<!--HOW TO SOLVE CROSS-ORIGIN REQUESTS Quando utilizando Ng-include 
-	https://stackoverflow.com/questions/43936500/cross-origin-requests-are-only-supported-for-protocol-schemes-http-data-chrom-->

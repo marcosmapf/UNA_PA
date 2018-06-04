@@ -8,7 +8,7 @@ body {
   font-family:"Maven Pro", Helvetica, Arial, sans-serif;
   font-size: 0.9em;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .produto input {
@@ -44,32 +44,15 @@ body {
 	justify-content: space-evenly;
 }
 
-.wrapper {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	grid-template-areas:	"header"	
-							"produtos"
-							"entrega"
-							"pagamento"
-							"footer";
-	grid-row-gap: 20px;
-}
-
-
 #page-header-grid {
 	grid-area: header;
 	background: orangered;
 	height: 50px;
 }
 
-
-
 #page-header-grid .d-flex {
 	justify-content: space-between;
 }
-
-
 
 #produtos-grid {
 	grid-area: produtos;
@@ -145,8 +128,6 @@ body {
 
 #page-footer-grid {
 	grid-area: footer;
-	display
-	position: absolute;
 }
 
 
@@ -199,13 +180,6 @@ footer {
 footer i {
 	padding-right: 10px;
 }
-
-
-
-
-
-
-
 
 .v-center{
 	height: 90%;

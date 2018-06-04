@@ -61,7 +61,7 @@
               </a>      
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="<?=base_url()?>user_authentication/index">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
               </a>
             </li>
@@ -166,8 +166,3 @@
 <script type="text/javascript" src="<?=base_url()?>assets/js/contato.js"></script> <!--Local Javascript Import-->
 
 </html>
-<!-- 
-Tutoriais Angular Messages 	
-https://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html 
-https://docs.angularjs.org/api/ngMessages/directive/ngMessages
--->
