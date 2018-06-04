@@ -37,7 +37,7 @@
 						</div>					
 						<div class="row">
 							<div class="form-group col-md-8 centralize">
-								<input id="submitButton" type="submit" class="btn btn-danger">
+								<input id="submitButton" type="submit" class="btn btn-danger" value="Entrar">
 							</div>
 							<div class="form-group col-md-4 centralize">
 								<label>
@@ -55,7 +55,7 @@
 					<div class="social-block-title">
 						<p>Login com Rede Social</p>
 					</div>
-					<div class="my-account">
+					<div class="my-account social-block">
 						<?php if ( !$this->facebook->logged_in() ): ?>
 							<a href="<?php echo $this->facebook->login_url()?>"><i style="text-align: center" class="fa fa-facebook-square fa-3x"></i></a>
 							<fb:facepile></fb:facepile>
@@ -69,11 +69,6 @@
 								<?php var_dump($result);?>
 							</pre>
 						<?php endif;?>
-						</div>
-					<div class="social-block">
-						<!--<a href="<?=$authUrl?>" id="facebook_connection" ng-click="">
-							<i class="fa fa-facebook-square fa-3x"></i>
-						</a>-->
 					</div>
 				</form>			
 			</main>
@@ -86,24 +81,13 @@
 				window.location.reload();
 			});
 		</script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
-	<script src="<?=base_url()?>assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
-	<script src="<?=base_url()?>assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
-	<script src="<?=base_url()?>assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
-	<script src="<?=base_url()?>assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
-	<script src="<?=base_url()?>assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
-	<script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
-	<script type="text/javascript" src="<?=base_url()?>assets/js/login.js"></script> <!--Local Javascript Import-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Jquery Import-->
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> <!--Bootstrap 4 Import-->
+		<script src="<?=base_url()?>assets/node_modules/angular/angular.js"></script> <!--AngularJS Import-->
+		<script src="<?=base_url()?>assets/node_modules/angular-animate/angular-animate.js"></script> <!--Angular Material Dependency (Animations) Import-->
+		<script src="<?=base_url()?>assets/node_modules/angular-aria/angular-aria.js"></script> <!--Angular Material Dependency (Accessibility) Import-->
+		<script src="<?=base_url()?>assets/node_modules/angular-messages/angular-messages.js"></script> <!--Angular Material Dependency (Angular Messages) Import--> 
+		<script src="<?=base_url()?>assets/node_modules/angular-material/angular-material.js"></script> <!--Angular Material Import-->
+		<script type="text/javascript" src="https://use.fontawesome.com/574c45c449.js"></script> <!--Font Awesome Import-->
+		<script type="text/javascript" src="<?=base_url()?>assets/js/login.js"></script> <!--Local Javascript Import-->
 	</html>
-
-
-	<!-- 
-	Tutoriais Angular Messages 	
-	https://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html 
-	https://docs.angularjs.org/api/ngMessages/directive/ngMessages
-	-->
-
-
-	<!--HOW TO SOLVE CROSS-ORIGIN REQUESTS Quando utilizando Ng-include 
-	https://stackoverflow.com/questions/43936500/cross-origin-requests-are-only-supported-for-protocol-schemes-http-data-chrom-->

@@ -44,32 +44,15 @@ body {
 	justify-content: space-evenly;
 }
 
-.wrapper {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
-	grid-template-areas:	"header"	
-							"produtos"
-							"entrega"
-							"pagamento"
-							"footer";
-	grid-row-gap: 20px;
-}
-
-
 #page-header-grid {
 	grid-area: header;
 	background: orangered;
 	height: 50px;
 }
 
-
-
 #page-header-grid .d-flex {
 	justify-content: space-between;
 }
-
-
 
 #produtos-grid {
 	grid-area: produtos;
@@ -197,13 +180,6 @@ footer {
 footer i {
 	padding-right: 10px;
 }
-
-
-
-
-
-
-
 
 .v-center{
 	height: 90%;
