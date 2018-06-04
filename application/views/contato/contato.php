@@ -79,9 +79,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> <!--Bootstrap 4 Stylesheet Import-->
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/contato.css"> <!--Local Stylesheet Import-->
 
-	<div class="container" style="margin-left: 25%">	
-		<main class="cadastro-pane col-md-12 col-sm-12 col-xs-12">
-			<form name="contatoForm" ng-submit="teste()" method="post" ng-controller="contatoController">	
+	<div class="container">	
+		<main class="cadastro-pane">
+			<form name="contatoForm" method="post" ng-controller="contatoController">	
 
 
 				<figure class="brand form-group">
