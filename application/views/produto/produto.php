@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="<?=base_url()?>carrinho">
             <img src="<?=base_url();?>assets/imagens/shopping-cart.png" alt="Shop-Cart">   
             </a>      
           </li>

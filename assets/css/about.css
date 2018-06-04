@@ -74,19 +74,29 @@ a:hover {
 	color: lightgray;
 }
 
-#dev-felippe {
+#dev-cleidiane {
 	background-color: #063554;
 	box-shadow: inset 6px -6px 30px 0px rgba(2,26,48,1);	
 }
 
-#dev-marcos {	
+#dev-felippe {
+	background-color: #474643;
+	box-shadow: inset 6px -6px 30px 0px rgba(38,38,38,1);	
+}
+
+#dev-marcos {
+	background-color: #286354;
+	box-shadow: inset 6px -6px 30px 0px rgba(38,38,38,1);	
+}
+
+#dev-marina {	
 	background-color: #821111;
 	box-shadow: inset 6px -6px 30px 0px rgba(77,10,11,1);
 }
 
-#dev-marina {
-	background-color: #214202;
-	box-shadow: inset 6px -6px 30px 0px rgba(17,41,1,1);
+#dev-matheus {
+	background-color: #052d23;
+	box-shadow: inset 6px -6px 30px 0px rgba(38,38,38,1);	
 }
 
 #dev-messias {
@@ -95,8 +105,8 @@ a:hover {
 }
 
 #dev-valdirene {
-	background-color: #3b3b3b;
-	box-shadow: inset 6px -6px 30px 0px rgba(38,38,38,1);	
+	background-color: #2f1b3a;
+	box-shadow: inset 6px -6px 30px 0px rgba(17,41,1,1);
 }
 
 .social-media {
