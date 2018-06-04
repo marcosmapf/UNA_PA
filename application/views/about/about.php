@@ -9,7 +9,7 @@
 	<div class="container" style="padding-top: 5%">
 		<div class="row descricao-projeto">
 			<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 col-12">
-				<a href="<?=base_url();?>/index.php/main/index">
+				<a href="<?=base_url();?>/main/index">
 					<img src="<?=base_url()?>/assets/imagens/logo-media.png">
 				</a>
 			</div>
