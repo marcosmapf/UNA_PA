@@ -70,7 +70,7 @@ class Login extends CI_Controller {
     	$this->session->unset_userdata('logado');
     	$this->session->unset_userdata('carrinho');
       $this->facebook->logout();
-    	redirect('user_authentication/index');
+    	redirect('');
 	}
 
  }

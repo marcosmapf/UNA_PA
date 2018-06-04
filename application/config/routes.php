@@ -71,6 +71,7 @@ $route['finalizar_compra/(:any)']['GET'] = 'carrinho/finalizar_compra/$1';
 $route['pedido_finalizado/(:any)/(:any)/(:any)']['GET'] = 'carrinho/pedido_finalizado/$1/$2/$3';
 $route['acompanhar_pedidos']['GET'] = 'carrinho/acompanhar_pedidos';
 
+$route['pedidos']['GET'] = 'Produto/pedidos';
 
 
 $route['calcular_frete']['POST'] = 'carrinho/calcular_frete';

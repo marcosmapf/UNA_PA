@@ -61,6 +61,11 @@
               </a>      
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="<?=base_url()?>pedidos">
+                <img src="<?=base_url()?>/assets/imagens/checklist.png" >   
+              </a>      
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="<?=base_url()?>user_authentication/index">
                 <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
               </a>
