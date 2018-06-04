@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<main class="card">
-			<div id="dev-clediane" class="dev-card">
+			<div id="dev-cleidiane" class="dev-card">
 				<div class="dev-img">
 					<img class="foto-desenvolvedor" src="<?=base_url()?>/assets/imagens/foto-cleidiane.jpg">
 				</div>
