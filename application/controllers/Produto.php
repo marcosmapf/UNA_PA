@@ -63,6 +63,7 @@ class Produto extends CI_Controller
         //$pedidos[3][0]['produtos'][0];
 
         $dados['pedidos'] = $pedidos;
+       
 
         render_template('pedido/pedido', $dados);
     }

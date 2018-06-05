@@ -115,7 +115,6 @@ class Carrinho extends CI_Controller
         $produtos = array();
         foreach($carrinho as $produto){
             array_push($produtos, $produto["id"]);
-
         }
 
         foreach ($produtos as $produto) {
@@ -134,11 +133,7 @@ class Carrinho extends CI_Controller
 
         $this->session->unset_userdata('carrinho');
 
-        redirect('acompanhar_pedidos');
-    }
-
-    public function acompanhar_pedidos(){
-        render_template('carrinho/acompanhar_pedidos');
+        redirect('pedidos');
     }
 
 

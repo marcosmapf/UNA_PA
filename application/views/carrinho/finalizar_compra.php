@@ -3,6 +3,7 @@
 
 		<div id="produtos-grid" class="container">
 			<section id="produto-adicionado-grid"><!--Produtos adicionados ao carrinho-->
+				<br><br>
 				<h3>Finalizar pedido</h3>
 				<h4>Produtos:</h4>
 				<?php foreach($produtos as $produto){ ?>
@@ -13,7 +14,7 @@
 
 
 				<h4>Endereço de entrega:</h4>
-				<?php var_dump($this->session->userdata('logado')['id']) ?>
+				
 					<?=$this->session->userdata('endereco')['endereco'] ?><br>
 					Número: <?=$this->session->userdata('endereco')['numero'] ?><br>
 					Bairro: <?=$this->session->userdata('endereco')['bairro'] ?><br>
@@ -24,7 +25,7 @@
 
 				<h4>Forma de pagamento:</h4>
 			</section>
-			<a href="<?=base_url()?>pedido_finalizado/<?=$id_unico?>/<?=$this->session->userdata('endereco')['codigoEnderecoCliente']?>/<?=$this->session->userdata('logado')['id']?>">Teste</a>
+			<a class="btn btn-lg btn-success" href="<?=base_url()?>pedido_finalizado/<?=$id_unico?>/<?=$this->session->userdata('endereco')['codigoEnderecoCliente']?>/<?=$this->session->userdata('logado')['id']?>">Finalizar</a>
 		</div>
 	</div>
 </body>
